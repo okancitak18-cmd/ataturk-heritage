@@ -257,7 +257,7 @@
           "id": "31-4",
           "title": "Galerie d'archives et consultation des photographies",
           "status": "a_valider",
-          "notes": "Revue utilisateur du 11/11/2026 : À corriger. Conserver grille sobre ; tester masonry et envisager réglage ultérieur. Visionneuse plein écran sombre avec zoom pincement/double tap, swipe entre photos, informations par geste/bouton. Notices enrichies avec dates, lieux, personnes, contexte, institutions, sources et droits vérifiés. Collections chronologiques/thématiques, liens documentés vers événements/citations. Auditer résolutions, authenticité, provenance et licences ; aucune image générée. Corrections acceptées en principe, à implémenter et tester web puis iOS. Voir issue #8 et objectif 31-9.",
+          "notes": "Revue utilisateur du 11/11/2026 : À corriger. Conserver grille sobre ; tester masonry et envisager réglage ultérieur. Visionneuse plein écran sombre avec zoom pincement/double tap, swipe entre photos, informations par geste/bouton. Notices enrichies avec dates, lieux, personnes, contexte, institutions, sources et droits vérifiés. Collections chronologiques/thématiques, liens documentés vers événements/citations. Auditer résolutions, authenticité, provenance et licences ; aucune image générée. Corrections acceptées en principe, à implémenter et tester web puis iOS. Voir issue #8 et objectif 31-9. ; Précisions de la revue 31-9 : zoom sans déplacement libre d'un doigt, fond noir vs sombre flouté à comparer, parcours collection puis global, fermeture ascendante ; issue #13.",
           "review": {
             "date": "2026-11-11",
             "decision": "À corriger",
@@ -384,7 +384,23 @@
           "id": "31-9",
           "title": "Navigation photographique pleine page, zoom et contexte au geste",
           "status": "a_valider",
-          "notes": "Fonctions partielles ; interactions spécifiques à finaliser ; Fonctionnalités à développer conjointement avec l'objectif 31-4 et le ticket #8 (plein écran, pinch zoom, double tap, swipe, notice par geste/bouton)."
+          "notes": "Revue 11/11/2026 : À corriger. Visionneuse photo plein écran sur fond noir ou sombre faiblement flouté (A/B visuel). Zoom par pincement/double tap, sans déplacement libre à un doigt demandé. Navigation d'abord dans la collection thématique puis dans toute la photothèque, sans doublons. Informations historiques discrètes en sheet à 2 niveaux et sourcées. Fermer par balayage du bas vers le haut ; tester conflit avec geste de contexte et iOS, bouton de repli accessible et restauration de la galerie. À développer avec 31-4, issue #8 et ticket #13.",
+          "review": {
+            "date": "2026-11-11",
+            "decision": "À corriger",
+            "requirements": [
+              "Plein écran sans navigation apparente ; comparer fond noir et sombre très faiblement translucide/flouté",
+              "Zoom par pincement et double tap, sans pan à un doigt à ce stade",
+              "Swipe horizontal : collection thématique active en premier puis photothèque entière, sans répétitions",
+              "Notice historique discrète type sheet, résumé puis contenu détaillé sourcé",
+              "Fermeture par balayage vertical du bas vers le haut et retour à la galerie au point d'origine"
+            ],
+            "gesture_conflict": "L'ouverture de la notice par geste vertical et la fermeture ascendante se concurrencent ; tester des zones de déclenchement distinctes, proposer bouton Informations pour la notice et bouton de fermeture accessible en repli.",
+            "visual_decision_pending": "Choisir noir profond ou sombre légèrement flouté après tests",
+            "implementation_status": "À corriger — spécifié, non implémenté ni testé sur iPhone",
+            "related_goal": "31-4",
+            "issue_url": "https://github.com/okancitak18-cmd/ataturk-heritage/issues/13"
+          }
         },
         {
           "id": "31-10",
@@ -643,8 +659,8 @@
   ],
   "review_resume": {
     "status": "en_cours",
-    "resume_at_goal": "31-9",
-    "resume_title": "Navigation photographique pleine page, zoom et contexte au geste",
-    "notes": "Revue 31-8 terminée le 11/11/2026 : À approfondir. Réglages discrets hors barre inférieure, mode clair/sombre/automatique et réglages widget depuis l'application, sans aperçu en direct. Ticket #12. Passer à 31-9, en cohérence avec 31-4 et ticket #8."
+    "resume_at_goal": "31-10",
+    "resume_title": "Synchronisation fonctionnelle web ↔ iOS sur un même référentiel",
+    "notes": "Revue 31-9 enregistrée le 11/11/2026 : À corriger. Issue #13 ; zoom, navigation photo collection puis globale, contexte discrètement intégré et fermeture ascendante à prototyper. Reprendre à 31-10."
   }
 }
