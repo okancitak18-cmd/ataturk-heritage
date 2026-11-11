@@ -167,6 +167,13 @@
               "date": "2026-11-11",
               "state": "Développé sur web et laboratoire, non validé sur iPhone natif",
               "details": "Animation fluide et effet verre translucide CSS (pas Liquid Glass natif)."
+            },
+            "v311_feedback": {
+              "date": "2026-11-11",
+              "gesture": "Gestes web satisfaisants, à vérifier sur application iOS native",
+              "glass": "Effet Liquid Glass simulé peu perceptible sur GitHub Pages ; expérimentation native iOS à reprendre",
+              "animations": "Animations perçues comme trop légères ; retravailler une fois les essais sur iPhone réalisés",
+              "state": "à reprendre, non validé"
             }
           }
         },
@@ -198,6 +205,11 @@
               "date": "2026-11-11",
               "state": "Développé sur web et laboratoire, non validé sur iPhone natif",
               "details": "Parcours du jour puis chronologie mixte ; alternative Découverte dans le labo ; audit historique encore ouvert."
+            },
+            "v311_feedback": {
+              "date": "2026-11-11",
+              "chronology": "Fonctionnement de l'éphéméride web jugé satisfaisant ; test iPhone natif à réaliser",
+              "state": "à valider sur iPhone"
             }
           }
         },
@@ -230,6 +242,14 @@
               "date": "2026-11-11",
               "state": "Développé sur web et laboratoire, non validé sur iPhone natif",
               "details": "Détail archive avec retour, dossiers contextuels issus du corpus, ouverture par bouton ou geste, flèches masquées, partage iOS via Web Share API."
+            },
+            "v311_feedback": {
+              "date": "2026-11-11",
+              "navigation": "Conservation des filtres et retour depuis les archives confirmés ; améliorer le design du bouton retour",
+              "reading": "Enrichir ultérieurement le registre historique et les dossiers sourcés",
+              "icons": "Archives validé ; Photos remplacé par une icône d'appareil photo vintage en V3.1.1",
+              "permanent_help": "Supprimer les indications de geste et de chronologie permanentes, maintenir seulement une aide de première utilisation dismissible",
+              "state": "à reprendre, non validé"
             }
           }
         },
@@ -528,6 +548,6 @@
     "status": "en_pause",
     "resume_at_goal": "31-4",
     "resume_title": "Galerie d'archives photographiques",
-    "notes": "Après l'implémentation de la préversion web V3.1.1, reprendre la revue V3.1 à 31-4. 31-1, 31-2 et 31-3 demeurent à valider après essai iPhone."
+    "notes": "Retours V3.1.1 du 11/11 enregistrés : gestes web OK ; Liquid Glass et animations à revoir sur iPhone ; éphéméride web OK ; retour Archives fonctionnel mais bouton à raffiner ; dossiers historiques à enrichir ; icône vintage caméra et suppression des aides permanentes. Reprise à l'objectif 31-4."
   }
 }

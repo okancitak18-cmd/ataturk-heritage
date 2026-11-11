@@ -79,5 +79,18 @@
       "31-2",
       "31-3"
     ]
+  },
+  {
+    "id": "DEC-011",
+    "date": "2026-11-11",
+    "title": "Retours sur V3.1.1 : conserver la sobriété et supprimer les consignes permanentes",
+    "status": "Corrections web appliquées — tests iPhone et enrichissement en attente",
+    "rationale": "Gestes et éphéméride web jugés satisfaisants, à tester sur iOS natif. Liquid Glass CSS peu perceptible et animations trop légères : approfondissement reporté au test iPhone. Retour aux archives et filtres fonctionnels, bouton retour à raffiner. Contexte historique à enrichir après fiabilisation du registre. Iconographie Archives validée, Photos remplacée par un appareil vintage. Consignes permanentes de glissement/chronologie retirées ; guide initial ponctuel conservé. Reprise de la revue à 31-4.",
+    "related_goals": [
+      "31-1",
+      "31-2",
+      "31-3"
+    ],
+    "review_resume": "31-4"
   }
 ]
