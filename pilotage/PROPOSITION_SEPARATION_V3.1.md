@@ -56,6 +56,14 @@ Les groupes thématiques résultent de l'association existante `photoId` ↔ `th
 
 **Contrôle effectué :** parsing JavaScript des deux pages, présence des 235 fiches historiques et de la photothèque ; pas de test visuel Safari/iPhone ni de validation des sources externes.
 
+## Cycle de fiabilisation : widgets, animations et tests
+
+- Simulations widgets d'accueil/verrouillage : les citations longues sont désormais montrées comme extraits identifiés. L'ordre des références dans la simulation est aligné sur le flux Aujourd'hui.
+- Snapshot SwiftUI/WidgetKit : présentation courte par taille de widget et signalement explicite des extraits, sans compilation ni certification native.
+- Animations web affinées, avec respect de `prefers-reduced-motion`.
+- Vérification automatique : `scripts/check-v31.mjs` + workflow GitHub Actions sur la Pull Request. Contrôles de source JSON embarquée, liens de photographies, schémas de dates, JavaScript et éléments de navigation.
+- Le suivi exhaustif de l'état, des limites et des décisions non prises est consigné dans `pilotage/AVANCEMENT_CORRECTIONS_V31.md`.
+
 ## Périmètre
 
 - Affichage plein écran du musée sur toutes les largeurs d'écran ; pas de maquette de téléphone entourée de panneaux de simulation.
