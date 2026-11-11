@@ -85,6 +85,22 @@
 .lockwidget p{font-size:13px;line-height:1.45;overflow-wrap:anywhere}.lockwidget .widget-excerpt{color:#f4d7ca;font-size:9px}
 .widgetcopy{padding:14px 12px;min-height:0}.widgetcopy .sub{margin-top:auto}
 @media(max-width:375px){.widgetcopy strong{font-size:13px}.widget-excerpt{font-size:8px}}
+
+/* Motion pass — responsive to gesture direction and reduced-motion settings. */
+:root{--heritage-motion-duration:420ms;--heritage-motion-ease:cubic-bezier(.16,.83,.26,1)}
+.story-enter-forward{animation:v31SlideForward var(--heritage-motion-duration) var(--heritage-motion-ease) both!important;will-change:transform,opacity}
+.story-enter-back{animation:v31SlideBack var(--heritage-motion-duration) var(--heritage-motion-ease) both!important;will-change:transform,opacity}
+@keyframes v31SlideForward{0%{transform:translate3d(36px,0,0) scale(.985);opacity:.55}65%{opacity:.94}100%{transform:translate3d(0,0,0) scale(1);opacity:1}}
+@keyframes v31SlideBack{0%{transform:translate3d(-36px,0,0) scale(.985);opacity:.55}65%{opacity:.94}100%{transform:translate3d(0,0,0) scale(1);opacity:1}}
+.deep-context{animation:v31Reveal 370ms cubic-bezier(.2,.8,.25,1) both!important}
+@keyframes v31Reveal{0%{opacity:0;transform:translateY(20px)}100%{opacity:1;transform:translateY(0)}}
+.viewer-sheet{animation:v31SheetUp 330ms cubic-bezier(.16,.86,.22,1) both}
+@keyframes v31SheetUp{from{transform:translateY(38px);opacity:.55}to{transform:translateY(0);opacity:1}}
+.archive-collection,.detail-back,.viewer-close,.viewer-info-button,.app-settings-button{transition:transform .18s ease,background-color .2s ease,box-shadow .2s ease}
+.archive-collection:active,.detail-back:active,.viewer-close:active,.viewer-info-button:active,.app-settings-button:active{transform:scale(.96)}
+@media(prefers-reduced-motion:reduce){:root{--heritage-motion-duration:0ms}
+.story-enter-forward,.story-enter-back,.deep-context,.viewer-sheet{animation:none!important;transform:none!important;opacity:1!important;will-change:auto!important}
+.archive-collection,.detail-back,.viewer-close,.viewer-info-button,.app-settings-button{transition:none!important}}
 </style>
 </head>
 <body data-theme="heritage">
