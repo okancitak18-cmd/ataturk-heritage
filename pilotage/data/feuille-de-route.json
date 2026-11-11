@@ -168,8 +168,28 @@
         {
           "id": "31-2",
           "title": "Date de simulation 29 octobre 2026",
-          "status": "fait",
-          "notes": "Paramètre initial du laboratoire"
+          "status": "a_valider",
+          "notes": "Revue 11/11/2026 — À approfondir. Date simulée uniquement dans le laboratoire web, distincte de la date système (.now) de l'app native V2. Ordre web actuel non aléatoire : citations du jour, événements du jour, autres citations puis événements triés par date décroissante ; aucune chronologie globale. Explorer un ordre chronologique mixte sur Aujourd'hui, puis éventuel réglage Chronologique / Découverte. Audit des dates et fallback en attente. Distinguer type historique et relation éditoriale à la date. UX/animations liées à #5. Voir ticket #6.",
+          "review": {
+            "date": "2026-11-11",
+            "decision": "À approfondir",
+            "observations": [
+              "Sélecteur de date du laboratoire fonctionnel, mais non destiné à l'application native",
+              "Tri actuel déterministe, mais groupé par type plutôt que chronologie historique globale",
+              "Souhait d'un défilement chronologique sur Aujourd'hui, avec éventuelle option utilisateur plus tard",
+              "Animations à approfondir conformément au ticket #5",
+              "Vérification des correspondances historiques et de la sélection alternative remise à plus tard",
+              "Clarifier citation, événement et découverte comme provenance ou relation à la date"
+            ],
+            "technical_findings": {
+              "web_date_simulation": "state.date et setDate() sont des outils de prévisualisation",
+              "native_date": "SwiftUI V2 se base sur la date système .now",
+              "feed_order": "matches() : date du jour/mois, citations avant événements, tri ascendant interne ; discoveries() citations décroissantes ; événements non correspondants décroissants ; step() avance en boucle",
+              "randomized": false
+            },
+            "status": "à expérimenter puis valider",
+            "issue_url": "https://github.com/okancitak18-cmd/ataturk-heritage/issues/6"
+          }
         },
         {
           "id": "31-3",
