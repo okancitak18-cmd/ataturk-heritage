@@ -58,5 +58,14 @@
     "rationale": "Le sélecteur de date est réservé au laboratoire web. Le flux Aujourd'hui est déterministe, actuellement groupé par citations/événements et non chronologique globalement. Explorer un tri chronologique des références du jour et une option de découverte paramétrable ultérieure ; vérifier le fallback, les datations et les catégories sans ambiguïté.",
     "related_goal": "31-2",
     "issue_url": "https://github.com/okancitak18-cmd/ataturk-heritage/issues/6"
+  },
+  {
+    "id": "DEC-009",
+    "date": "2026-11-11",
+    "title": "Revue 31-3 : revoir le retour des archives et approfondir l'expérience de lecture",
+    "status": "À corriger — non implémenté",
+    "rationale": "Barre et favoris conservés. L'ouverture d'une archive doit préserver l'origine et permettre le retour. Dossier Comprendre plus approfondi et sourcé ; geste complémentaire à expérimenter. Flèches de navigation visibles à retirer, alternatives accessibles à maintenir. Icônes à tester et partage à clarifier. Les animations sont liées à #5.",
+    "related_goal": "31-3",
+    "issue_url": "https://github.com/okancitak18-cmd/ataturk-heritage/issues/7"
   }
 ]

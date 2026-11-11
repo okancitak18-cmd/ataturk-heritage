@@ -194,8 +194,29 @@
         {
           "id": "31-3",
           "title": "Navigation immersive entre citations et événements",
-          "status": "fait",
-          "notes": "Défilement et cartes disponibles dans le prototype web"
+          "status": "a_valider",
+          "notes": "Revue utilisateur du 11/11/2026 : À corriger. Barre inférieure et favoris satisfaisants. Explorer icônes Archives/Photos plus explicites et Liquid Glass discret (#5). Corriger l'ouverture d'une archive qui bascule actuellement vers Aujourd'hui : vue détail indépendante avec retour au point d'origine et conservation filtres/position. Enrichir substantiellement « Comprendre cette référence » avec histoire, contexte géopolitique et sources validées ; tester ouverture par geste supplémentaire en bas de fiche et par bouton. Supprimer les flèches précédent/suivant de l'interface principale, avec geste tactile, aide initiale et alternatives accessibles. Remplacer l'icône de partage ↗. Animation liée à #5 ; voir issue #7.",
+          "review": {
+            "date": "2026-11-11",
+            "decision": "À corriger",
+            "positive": [
+              "Barre de navigation discrète et intuitive",
+              "Favoris correctement placés",
+              "Direction artistique cohérente"
+            ],
+            "corrections": [
+              "Étudier des icônes Archives/Photos plus lisibles et un traitement Liquid Glass discret",
+              "Ouverture des fiches depuis Archives/Favoris dans une vue de détail maintenant contexte et filtres ; retour par geste, commande ou onglet",
+              "Contenu « Comprendre cette référence » plus riche, contextualisé, nuancé et sourcé (historique, géopolitique, références officielles)",
+              "Ouvrir le dossier par bouton ou geste supplémentaire en bas de fiche après test d'accessibilité",
+              "Supprimer les flèches précédent/suivant visibles au profit des gestes, d'un guide initial et de contrôles accessibles",
+              "Modifier l'icône de partage en symbole clair de partage iOS",
+              "Revoir les animations avec objectif 31-1"
+            ],
+            "technical_findings": "Dans index.html, onClick(data-entry) force state.tab='today'. Le contexte est une expansion courte de contextFR ; les flèches proviennent de today() data-step ; symbole de partage actuel ↗.",
+            "issue_url": "https://github.com/okancitak18-cmd/ataturk-heritage/issues/7",
+            "implementation_status": "Corrections spécifiées mais non développées ni validées"
+          }
         },
         {
           "id": "31-4",
