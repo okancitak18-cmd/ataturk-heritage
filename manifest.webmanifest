@@ -1,0 +1,19 @@
+{
+  "name": "ATATÜRK Heritage — Démonstration",
+  "short_name": "Heritage",
+  "description": "Prototype historique et culturel — V3.1",
+  "lang": "fr",
+  "start_url": "./?mode=app&theme=heritage&date=2026-10-29",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f7f3eb",
+  "theme_color": "#742d3c",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
