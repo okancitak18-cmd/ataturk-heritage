@@ -5,7 +5,8 @@ on:
       - "index.html"
       - "laboratoire.html"
       - "data/**"
-      - "scripts/check-v31.mjs"
+      - "scripts/**"
+      - "ios/v31_draft/**"
       - ".github/workflows/v31-checks.yml"
   workflow_dispatch:
 jobs:
@@ -16,4 +17,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Run repository integrity checks
-        run: node scripts/check-v31.mjs
+        run: |
+          node scripts/check-v31.mjs
+          node scripts/check-photo-audit-v31.mjs
+          node scripts/package-ios-v31.mjs --out .build/ios-resources
