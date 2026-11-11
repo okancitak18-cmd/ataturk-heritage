@@ -23,6 +23,24 @@ Les modifications suivantes sont **implémentées uniquement sur la branche de t
 
 Ces éléments sont soumis à la revue du propriétaire **avant la fusion**.
 
+## Itération suivante : laboratoire et apparence (11 novembre 2026)
+
+**Intégré uniquement dans la branche de développement :**
+- Même visionneuse photo dans le laboratoire et dans le prototype d'application : fond sombre, zoom pincement/double tap, parcours par période de départ puis catalogue restant, notice courte et détaillée, fermeture par balayage descendant.
+- Préférences d'apparence indépendantes : application, widget d'accueil simulé, widget verrouillé simulé ; trois thèmes Heritage, Republic et Archive, chacun avec choix Clair / Sombre / Automatique selon le système.
+- Application : icône discrète de réglages dans l'en-tête ouvrant un panneau ; pas d'ajout à la barre inférieure.
+- Laboratoire : sélection de thème, apparence et préférences des trois surfaces, réinitialisation des choix et suivi des paramètres.
+- Persistance locale par `localStorage` pour les préférences de présentation de la démonstration web.
+
+**Réserves importantes :**
+- Les collections photographiques actuellement testées sont des **groupes chronologiques provisoires inférés de l'année déclarée**, et non des collections éditoriales/thématiques scientifiquement validées.
+- Le rouge `Republic` conserve sa palette provisoire, sans prétendre correspondre exactement au rouge des premiers drapeaux de la République.
+- Les modes sombres sont des variantes CSS expérimentales ; ils n'intègrent pas le matériau natif Liquid Glass.
+- Les préférences d'apparence des vrais widgets iOS (WidgetKit) restent à porter et tester dans un projet Xcode natif.
+- Le laboratoire et l'app utilisent encore du code en grande partie dupliqué ; la mutualisation technique est une étape ultérieure.
+- L'interface n'a pas encore bénéficié d'un test de rendu ou de gestes sur un iPhone réel. Les validations JavaScript réalisées sont **syntaxiques et structurelles uniquement**.
+- **Aucune modification du site GitHub Pages public avant autorisation explicite** ; cette proposition n'est pas une demande de publication immédiate.
+
 ## Périmètre
 
 - Affichage plein écran du musée sur toutes les largeurs d'écran ; pas de maquette de téléphone entourée de panneaux de simulation.
