@@ -173,5 +173,14 @@
     "rationale": "GitHub centralise les sources historiques validées et leurs mises à jour. Pas de synchronisation distante automatique dans l'application native pour le moment ; les contenus seront distribués par version après validation. Favoriser la consultation hors connexion, selon le poids des archives photographiques. Vérification des dates, sources et droits impérative avant diffusion.",
     "related_goal": "31-10",
     "issue_url": "https://github.com/okancitak18-cmd/ataturk-heritage/issues/14"
+  },
+  {
+    "id": "DEC-019",
+    "date": "2026-11-11",
+    "title": "Revue 31-11 : recette iPhone à l'échelle de V3.1, accessibilité intégrée dès la conception",
+    "status": "À approfondir — protocole validé, tests finaux en attente",
+    "rationale": "Deux phases Safari iPhone puis SwiftUI/WidgetKit natif. L'accessibilité doit être prise en compte immédiatement ; un essai sur iPhone réel conditionne uniquement la validation globale V3.1 et non chaque fonctionnalité intermédiaire. Les corrections d'interface seront regroupées après la revue complète V3.1, avant la recette définitive.",
+    "related_goal": "31-11",
+    "issue_url": "https://github.com/okancitak18-cmd/ataturk-heritage/issues/15"
   }
 ]

@@ -435,7 +435,20 @@
           "id": "31-11",
           "title": "Test accessibilité, VoiceOver, Safe Area et iPhone réel",
           "status": "a_valider",
-          "notes": "Essais navigateur uniquement"
+          "notes": "Revue 11/11/2026 — À approfondir. Deux phases : tests Safari iPhone puis SwiftUI/WidgetKit natif. Intégrer l'accessibilité dès la conception (VoiceOver, Dynamic Type, contraste, Safe Area, gestes alternatifs, Reduce Motion). Un test réel sur iPhone est requis pour valider globalement la version V3.1, pas pour valider chaque fonctionnalité intermédiaire. Terminer d'abord la revue de tous les objectifs, puis organiser une campagne groupée de corrections d'interface avant validation finale ; consigner anomalies et vérifications GitHub. Voir issue #15.",
+          "review": {
+            "date": "2026-11-11",
+            "decision": "À approfondir",
+            "requirements": [
+              "Phase A : tests web dans Safari iPhone, puis phase B : tests de l'application native SwiftUI/WidgetKit",
+              "Accessibilité prise en compte dès le développement, sans attendre la fin du projet",
+              "Test sur iPhone physique obligatoire seulement pour la validation globale V3.1 et non pour chaque fonctionnalité intermédiaire",
+              "Achever toute la revue V3.1 avant de lancer la campagne groupée de corrections d'interface",
+              "Traçabilité des anomalies, test de non-régression et validation finale documentés"
+            ],
+            "implementation_status": "Protocole documenté ; recette native globale non réalisée",
+            "issue_url": "https://github.com/okancitak18-cmd/ataturk-heritage/issues/15"
+          }
         },
         {
           "id": "31-12",
@@ -682,8 +695,8 @@
   ],
   "review_resume": {
     "status": "en_cours",
-    "resume_at_goal": "31-11",
-    "resume_title": "Test accessibilité, VoiceOver, Safe Area et iPhone réel",
-    "notes": "Objectif 31-10 revu le 11/11/2026 — À approfondir. GitHub source unique, mises à jour iOS par version (pas de synchro distante automatique), hors connexion souhaité si taille compatible, audit historique obligatoire. Reprendre à 31-11."
+    "resume_at_goal": "31-12",
+    "resume_title": "Publication GitHub Pages avec accès au laboratoire complet",
+    "notes": "Revue 31-11 enregistrée le 11/11/2026 : À approfondir. Tester d'abord Safari puis iOS natif, accessibilité dès conception. iPhone réel requis pour validation globale V3.1 seulement ; corrections d'interface groupées après fin de la revue V3.1. Ticket #15. Reprendre à 31-12."
   }
 }
