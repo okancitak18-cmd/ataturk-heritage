@@ -6,6 +6,23 @@ Cette branche transforme `index.html` en application publique orientée consulta
 
 Le laboratoire complet `laboratoire.html` reste volontairement inchangé. Le tableau de bord public en lecture seule `pilotage/` reste inchangé.
 
+## Avancement de la branche de développement
+
+Les modifications suivantes sont **implémentées uniquement sur la branche de travail**, non publiées :
+
+- **Séparation application / laboratoire** : interface publique épurée sur mobile et desktop ; outils techniques réservés à `laboratoire.html`.
+- **Retour Archives** : bouton rond discret, meilleure hiérarchie et conservation du point de départ.
+- **Photothèque (prototype V3.1)** : visionneuse sombre plein écran, navigation par groupe initial puis reste de la photothèque, zoom par double tap et pincement, notices à deux niveaux, bouton de fermeture et balayage **descendant (haut vers bas)**, retour préservant la position initiale.
+- **Limite éditoriale** : les notices exploitent uniquement les métadonnées déjà présentes et doivent encore être enrichies et validées.
+
+### État des vérifications
+- Syntaxe JavaScript vérifiée après les modifications.
+- Vérification statique des commandes, parcours et état d'ouverture/fermeture.
+- **Pas de validation réelle Safari iPhone, pas de capture visuelle validée et pas de build SwiftUI natif.**
+- Les déplacements tactiles, l'absence de conflits avec les gestes iOS, les images distantes et les cas d'échec de chargement sont à tester.
+
+Ces éléments sont soumis à la revue du propriétaire **avant la fusion**.
+
 ## Périmètre
 
 - Affichage plein écran du musée sur toutes les largeurs d'écran ; pas de maquette de téléphone entourée de panneaux de simulation.
