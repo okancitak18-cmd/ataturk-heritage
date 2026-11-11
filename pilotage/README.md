@@ -1,24 +1,17 @@
-# ATATÜRK Heritage — Centre de pilotage
+# Pilotage ATATÜRK Heritage
 
-Accès : https://okancitak18-cmd.github.io/ataturk-heritage/pilotage/
+## Partage public en lecture seule
 
-## Fichiers faisant foi
+- La page `pilotage/index.html` est la version publique de consultation, sans saisie ni sauvegarde : https://okancitak18-cmd.github.io/ataturk-heritage/pilotage/
+- Les visiteurs peuvent consulter les versions, appliquer des filtres et naviguer entre les dossiers.
+- Les données affichées sont publiques dans `pilotage/data/*.json`. **Le dépôt est public**, ce qui permet de lire, copier et télécharger ces données.
 
-- `data/identite.json` : identité produit et principes
-- `data/feuille-de-route.json` : objectifs par version, avec états et motifs
-- `data/risques.json` : registre de suivi
-- `data/ressources.json` : accès aux ressources
-- `data/decisions.json` : décisions approuvées
+## Édition
 
-## Procédure de modification
+- L'ancien laboratoire d'édition locale est conservé dans `pilotage/edition/index.html`. Il ne permet pas d'écrire automatiquement sur GitHub, mais les changements locaux peuvent être exportés.
+- La modification durable se fait dans GitHub, dans les fichiers `pilotage/data/*.json`, par une personne ayant les permissions nécessaires.
+- La page d'édition est également techniquement publique : elle n'est pas un espace d'administration sécurisé. Ne jamais y placer de secret ni de données confidentielles.
 
-1. Modifier les champs ou les statuts dans le tableau de bord.
-2. Exporter ou copier le JSON correspondant.
-3. Ouvrir le fichier JSON sur GitHub et remplacer son contenu via le bouton d'édition, puis effectuer un commit (ou une pull request).
-4. Actualiser le site et cliquer « Réinitialiser localement » si des valeurs locales anciennes masquent la version GitHub.
+## Sécurité
 
-**Limite explicite :** une modification locale dans l'interface n'est pas automatiquement enregistrée dans GitHub ; seul le commit dans le dépôt constitue une mise à jour durable du projet pour les conversations suivantes.
-
-## Validation
-
-Un état « Fait » peut concerner uniquement la démo web. La validation finale exige une recette propre à la plateforme concernée. Le projet natif n'a pas encore été compilé sur iOS, et le registre historique attend une vérification éditoriale systématique.
+GitHub Pages publie des fichiers statiques. Un lien de consultation ne confère **aucun droit d'écriture** au dépôt GitHub. Les données ne doivent cependant pas être confidentielles, car un dépôt public est librement consultable. La prévention des contributions non autorisées dépend des droits GitHub et de la protection de la branche `main`, non du seul retrait des boutons d'édition.
