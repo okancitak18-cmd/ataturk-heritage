@@ -410,8 +410,26 @@
         {
           "id": "31-10",
           "title": "Synchronisation fonctionnelle web ↔ iOS sur un même référentiel",
-          "status": "non_commence",
-          "notes": "Données encore embarquées ; source JSON commune à construire"
+          "status": "a_valider",
+          "notes": "Revue 11/11/2026 — À approfondir : GitHub référentiel unique de contenus historiques approuvés, modifications et validation réalisées ensemble. Pas de synchronisation automatique distante dans l'application iOS pour le moment : contenus intégrés aux versions publiées, reconsidérer selon poids de l'app et fréquence des mises à jour. Hors connexion recherché sous réserve de taille : textes/métadonnées locales, images optimisées et options haute résolution à étudier. Validation éditoriale obligatoire avant diffusion. Référentiel JSON commun au web et iOS ; audits sources/licences. Ticket #14 et #4.",
+          "review": {
+            "date": "2026-11-11",
+            "decision": "À approfondir",
+            "requirements": [
+              "GitHub est le référentiel unique des contenus historiques validés, mis à jour en collaboration",
+              "Ne pas prévoir de synchronisation automatique de contenus depuis GitHub vers iPhone à ce stade ; contenu distribué par version publiée",
+              "Réexaminer les mises à jour distantes selon la taille de l'application et fréquence des changements",
+              "Prévoir fonctionnement hors ligne dans la mesure du possible, sous contrainte de taille",
+              "Mesurer les poids des photographies et distinguer textes, métadonnées, images optimisées et originaux haute résolution",
+              "Vérifier et approuver dates, attributions, traductions, sources et droits avant diffusion"
+            ],
+            "implementation_status": "Architecture approuvée dans son principe, référentiel JSON partagé/build iOS à développer",
+            "related_issues": [
+              "https://github.com/okancitak18-cmd/ataturk-heritage/issues/4",
+              "https://github.com/okancitak18-cmd/ataturk-heritage/issues/14"
+            ],
+            "issue_url": "https://github.com/okancitak18-cmd/ataturk-heritage/issues/14"
+          }
         },
         {
           "id": "31-11",
@@ -664,8 +682,8 @@
   ],
   "review_resume": {
     "status": "en_cours",
-    "resume_at_goal": "31-10",
-    "resume_title": "Synchronisation fonctionnelle web ↔ iOS sur un même référentiel",
-    "notes": "Correction explicite du geste de fermeture 31-9 enregistrée le 11/11/2026 : balayage vertical haut vers bas. Poursuivre la revue à 31-10."
+    "resume_at_goal": "31-11",
+    "resume_title": "Test accessibilité, VoiceOver, Safe Area et iPhone réel",
+    "notes": "Objectif 31-10 revu le 11/11/2026 — À approfondir. GitHub source unique, mises à jour iOS par version (pas de synchro distante automatique), hors connexion souhaité si taille compatible, audit historique obligatoire. Reprendre à 31-11."
   }
 }

@@ -164,5 +164,14 @@
     ],
     "issue_url": "https://github.com/okancitak18-cmd/ataturk-heritage/issues/13",
     "correction_2026_11_11": "L'utilisateur a explicitement corrigé le geste de fermeture de la visionneuse photographique : haut vers bas, et non bas vers haut. La version précédente de DEC-017 a été rectifiée."
+  },
+  {
+    "id": "DEC-018",
+    "date": "2026-11-11",
+    "title": "Revue 31-10 : référentiel GitHub unique et distribution des contenus par version, avec objectif hors connexion",
+    "status": "À approfondir — architecture retenue, tests de taille et intégration à réaliser",
+    "rationale": "GitHub centralise les sources historiques validées et leurs mises à jour. Pas de synchronisation distante automatique dans l'application native pour le moment ; les contenus seront distribués par version après validation. Favoriser la consultation hors connexion, selon le poids des archives photographiques. Vérification des dates, sources et droits impérative avant diffusion.",
+    "related_goal": "31-10",
+    "issue_url": "https://github.com/okancitak18-cmd/ataturk-heritage/issues/14"
   }
 ]
