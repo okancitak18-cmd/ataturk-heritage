@@ -182,5 +182,14 @@
     "rationale": "Deux phases Safari iPhone puis SwiftUI/WidgetKit natif. L'accessibilité doit être prise en compte immédiatement ; un essai sur iPhone réel conditionne uniquement la validation globale V3.1 et non chaque fonctionnalité intermédiaire. Les corrections d'interface seront regroupées après la revue complète V3.1, avant la recette définitive.",
     "related_goal": "31-11",
     "issue_url": "https://github.com/okancitak18-cmd/ataturk-heritage/issues/15"
+  },
+  {
+    "id": "DEC-020",
+    "date": "2026-11-11",
+    "title": "Revue 31-12 : trois espaces distincts, historique conservé et validation avant publication",
+    "status": "À corriger — règle d'approbation adoptée, enforcement technique à configurer",
+    "rationale": "Les URL application, laboratoire et pilotage fonctionnent, mais les deux premières restent visuellement trop semblables sur ordinateur. Prévoir une vraie application publique épurée, un laboratoire distinct et la consultation du pilotage en lecture seule. Conserver chaque version majeure. Toute évolution visible doit être approuvée explicitement avant fusion/publication ; Pages déploie actuellement automatiquement depuis main, d'où la nécessité de branches/PR et protections de déploiement.",
+    "related_goal": "31-12",
+    "issue_url": "https://github.com/okancitak18-cmd/ataturk-heritage/issues/16"
   }
 ]

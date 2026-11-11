@@ -453,8 +453,29 @@
         {
           "id": "31-12",
           "title": "Publication GitHub Pages avec accès au laboratoire complet",
-          "status": "fait",
-          "notes": "Code publié ; accessibilité finale à contrôler sur téléphone"
+          "status": "a_valider",
+          "notes": "Revue 11/11/2026 — À corriger. Les trois liens sont accessibles, mais l'application web et le laboratoire partagent trop de structure et se ressemblent sur desktop. Séparer nettement l'expérience publique sans commandes de simulation, le laboratoire de test avec inspecteur et réglages, et la feuille de route publique en lecture seule. Archiver toutes les versions majeures. Exiger l'accord explicite de l'utilisateur avant toute publication de changements visibles de l'app/laboratoire : développer en branches, proposer PR/changelog, puis fusionner seulement après accord. GitHub Pages déploie actuellement automatiquement main : véritable garde-fou technique/protection branche à configurer, non encore effectif. Ticket #16.",
+          "review": {
+            "date": "2026-11-11",
+            "decision": "À corriger",
+            "positive": [
+              "Application web et laboratoire accessibles selon confirmation utilisateur",
+              "Feuille de route en consultation publique opérationnelle"
+            ],
+            "findings": [
+              "Application et laboratoire partagent le moteur HTML/JS et les données ; l'application offre une adaptation plein écran mobile, mais sur ordinateur ressemble fortement au laboratoire",
+              "Le centre de pilotage est une troisième interface distincte, en lecture seule"
+            ],
+            "requirements": [
+              "Trois accès clairement distincts : application publique sans commandes de laboratoire, laboratoire interactif avec simulateur et inspecteur, tableau de bord en lecture seule",
+              "Historiser et archiver chaque version importante",
+              "Validation explicite du propriétaire avant publication de chaque évolution visible",
+              "Développement dans branche de travail, PR de revue avant fusion et diffusion",
+              "Renforcer techniquement l'étape d'approbation du déploiement : pages depuis main publie aujourd'hui automatiquement, donc la simple règle documentaire ne suffit pas"
+            ],
+            "implementation_status": "Les liens existent, mais séparation UX et workflow d'approbation technique à développer",
+            "issue_url": "https://github.com/okancitak18-cmd/ataturk-heritage/issues/16"
+          }
         }
       ]
     },
@@ -694,9 +715,9 @@
     }
   ],
   "review_resume": {
-    "status": "en_cours",
-    "resume_at_goal": "31-12",
-    "resume_title": "Publication GitHub Pages avec accès au laboratoire complet",
-    "notes": "Revue 31-11 enregistrée le 11/11/2026 : À approfondir. Tester d'abord Safari puis iOS natif, accessibilité dès conception. iPhone réel requis pour validation globale V3.1 seulement ; corrections d'interface groupées après fin de la revue V3.1. Ticket #15. Reprendre à 31-12."
+    "status": "revue_terminee_corrections_a_preparer",
+    "resume_at_goal": null,
+    "resume_title": "Bilan consolidé et campagne de corrections V3.1",
+    "notes": "Revue des 12 objectifs V3.1 achevée le 11/11/2026. La version n'est PAS validée ; 31-1 à 31-12 restent à vérifier/corriger selon décisions. Priorisation dans pilotage/BILAN_REVUE_V3.1.md. Aucune publication visible d'une nouvelle version sans accord explicite du propriétaire."
   }
 }
