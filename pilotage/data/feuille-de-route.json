@@ -162,7 +162,12 @@
               "Tester sans engagement un habillage Liquid Glass pour les éléments de navigation"
             ],
             "implementation_status": "à expérimenter puis valider, sans refonte de la direction artistique",
-            "issue_url": "https://github.com/okancitak18-cmd/ataturk-heritage/issues/5"
+            "issue_url": "https://github.com/okancitak18-cmd/ataturk-heritage/issues/5",
+            "v311": {
+              "date": "2026-11-11",
+              "state": "Développé sur web et laboratoire, non validé sur iPhone natif",
+              "details": "Animation fluide et effet verre translucide CSS (pas Liquid Glass natif)."
+            }
           }
         },
         {
@@ -188,7 +193,12 @@
               "randomized": false
             },
             "status": "à expérimenter puis valider",
-            "issue_url": "https://github.com/okancitak18-cmd/ataturk-heritage/issues/6"
+            "issue_url": "https://github.com/okancitak18-cmd/ataturk-heritage/issues/6",
+            "v311": {
+              "date": "2026-11-11",
+              "state": "Développé sur web et laboratoire, non validé sur iPhone natif",
+              "details": "Parcours du jour puis chronologie mixte ; alternative Découverte dans le labo ; audit historique encore ouvert."
+            }
           }
         },
         {
@@ -215,7 +225,12 @@
             ],
             "technical_findings": "Dans index.html, onClick(data-entry) force state.tab='today'. Le contexte est une expansion courte de contextFR ; les flèches proviennent de today() data-step ; symbole de partage actuel ↗.",
             "issue_url": "https://github.com/okancitak18-cmd/ataturk-heritage/issues/7",
-            "implementation_status": "Corrections spécifiées mais non développées ni validées"
+            "implementation_status": "Corrections spécifiées mais non développées ni validées",
+            "v311": {
+              "date": "2026-11-11",
+              "state": "Développé sur web et laboratoire, non validé sur iPhone natif",
+              "details": "Détail archive avec retour, dossiers contextuels issus du corpus, ouverture par bouton ou geste, flèches masquées, partage iOS via Web Share API."
+            }
           }
         },
         {
@@ -508,5 +523,11 @@
         }
       ]
     }
-  ]
+  ],
+  "review_resume": {
+    "status": "en_pause",
+    "resume_at_goal": "31-4",
+    "resume_title": "Galerie d'archives photographiques",
+    "notes": "Après l'implémentation de la préversion web V3.1.1, reprendre la revue V3.1 à 31-4. 31-1, 31-2 et 31-3 demeurent à valider après essai iPhone."
+  }
 }
