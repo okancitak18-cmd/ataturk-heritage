@@ -279,8 +279,28 @@
         {
           "id": "31-5",
           "title": "Trois thèmes Heritage / Republic / Archive",
-          "status": "fait",
-          "notes": "Thèmes disponibles dans la démonstration"
+          "status": "a_valider",
+          "notes": "Revue 11/11/2026 — À corriger. Heritage demeure thème principal/par défaut ; créer un mode clair/sombre soigné pour les trois thèmes. Republic : rechercher un rouge ancien historiquement documenté des premiers drapeaux de la République (1923), sans inventer de code HEX officiel ; préparer variantes vintage puis valider. Archive actuel conservé. Préférences des thèmes et modes mémorisées, indépendantes entre application et widgets d'accueil/verrouillage (selon contraintes WidgetKit). Voir issue #9, coordonner avec 31-8.",
+          "review": {
+            "date": "2026-11-11",
+            "decision": "À corriger",
+            "requirements": [
+              "Heritage thème principal et par défaut, mode sombre dédié",
+              "Mode sombre également pour Republic et Archive",
+              "Republic en rouge ancien inspiré du début de la République avec fidélité documentaire ; pas de teinte exacte prétendue sans source primaire",
+              "Archive conserver la palette actuelle",
+              "Réglages permettant sélection et mémorisation des thèmes et des modes clair/sombre",
+              "Réglages indépendants pour application, widgets accueil et verrouillage"
+            ],
+            "historical_caveat": "La loi n°2994 adoptée le 29/05/1936 décrit un fond écarlate, sans constituer une preuve d'un code couleur exact en 1923 ; définir des variantes de rendu vintage à documenter et faire valider.",
+            "historical_sources": [
+              "https://ttk.gov.tr/turk-bayragi-kanunu/",
+              "https://ataturkansiklopedisi.gov.tr/detay/411/T%C3%BCrk-Bayra%C4%9F%C4%B1-Kanunu"
+            ],
+            "implementation_status": "Exigences validées en revue ; corrections non implémentées",
+            "related_goal": "31-8",
+            "issue_url": "https://github.com/okancitak18-cmd/ataturk-heritage/issues/9"
+          }
         },
         {
           "id": "31-6",
@@ -298,7 +318,7 @@
           "id": "31-8",
           "title": "Choix de mode de widget et thème sur iOS",
           "status": "non_commence",
-          "notes": "Configuration native à implémenter"
+          "notes": "Configuration native à implémenter ; À coordonner avec la revue 31-5 et issue #9 : thèmes et apparences clairs/sombres indépendants pour l'app, widgets accueil/verrouillage."
         },
         {
           "id": "31-9",
@@ -563,8 +583,8 @@
   ],
   "review_resume": {
     "status": "en_cours",
-    "resume_at_goal": "31-5",
-    "resume_title": "Trois thèmes Heritage / Republic / Archive",
-    "notes": "Revue 31-4 terminée le 11/11/2026 avec décision À corriger, exigences enregistrées dans l'issue #8. Poursuivre à l'objectif 31-5 ; 31-1 à 31-4 restent à valider après corrections / tests iPhone."
+    "resume_at_goal": "31-6",
+    "resume_title": "Simulation widgets d'accueil et de verrouillage",
+    "notes": "Objectif 31-5 revu le 11/11/2026 : À corriger. Heritage par défaut, mode sombre pour trois thèmes, Republic rouge ancien à documenter, Archive conservé, réglages mémorisés et indépendants app/widgets. Ticket #9. Reprendre à 31-6."
   }
 }

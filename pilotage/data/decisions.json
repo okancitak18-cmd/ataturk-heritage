@@ -101,5 +101,18 @@
     "rationale": "Grille actuelle conservée ; exploration masonry et éventuel réglage futur. Visionneuse sombre plein écran, zoom et gestes, notice historique enrichie et sourcée, collections thématiques/chronologiques, authenticité et provenance strictement vérifiées. Coordination avec 31-9 et ticket #3 ; priorité à la validation visuelle web avant portage natif.",
     "related_goal": "31-4",
     "issue_url": "https://github.com/okancitak18-cmd/ataturk-heritage/issues/8"
+  },
+  {
+    "id": "DEC-013",
+    "date": "2026-11-11",
+    "title": "Revue 31-5 : trois thèmes personnalisables, chacun en clair/sombre et paramètres widgets indépendants",
+    "status": "À corriger — spécification adoptée, développement en attente",
+    "rationale": "Heritage reste thème principal/par défaut, Archive est conservé. Republic devra évoquer le rouge des premiers drapeaux républicains dans un rendu ancien, sans prétendre identifier un code couleur exact non documenté. Mode sombre pour tous ; préférences persistantes et distinctes entre l'application, l'accueil et l'écran verrouillé selon WidgetKit. Voir issue #9 et objectif 31-8.",
+    "related_goal": "31-5",
+    "related_goals": [
+      "31-5",
+      "31-8"
+    ],
+    "issue_url": "https://github.com/okancitak18-cmd/ataturk-heritage/issues/9"
   }
 ]
