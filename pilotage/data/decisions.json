@@ -156,12 +156,13 @@
     "date": "2026-11-11",
     "title": "Revue 31-9 : visionneuse photo immersive et parcours thématique prioritaire",
     "status": "À corriger — spécification adoptée, développement en attente",
-    "rationale": "Photo plein écran sur fond noir ou sombre à léger flou à comparer, zoom pincement/double tap sans déplacement libre à un doigt, navigation par collection thématique puis photothèque entière, informations historiques discrètes en sheet. Fermeture par balayage vertical ascendant, conflit avec geste d'information à traiter lors du prototype. Retour à la galerie avec état conservé.",
+    "rationale": "Photo plein écran sur fond noir ou sombre à léger flou à comparer, zoom pincement/double tap sans déplacement libre à un doigt, navigation par collection thématique puis photothèque entière, informations historiques discrètes en sheet. Fermeture par balayage vertical descendant, conflit potentiel avec geste d'information à traiter lors du prototype. Retour à la galerie avec état conservé.",
     "related_goal": "31-9",
     "related_goals": [
       "31-4",
       "31-9"
     ],
-    "issue_url": "https://github.com/okancitak18-cmd/ataturk-heritage/issues/13"
+    "issue_url": "https://github.com/okancitak18-cmd/ataturk-heritage/issues/13",
+    "correction_2026_11_11": "L'utilisateur a explicitement corrigé le geste de fermeture de la visionneuse photographique : haut vers bas, et non bas vers haut. La version précédente de DEC-017 a été rectifiée."
   }
 ]
