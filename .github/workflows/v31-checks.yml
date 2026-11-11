@@ -1,0 +1,19 @@
+name: V3.1 Static Checks
+on:
+  pull_request:
+    paths:
+      - "index.html"
+      - "laboratoire.html"
+      - "data/**"
+      - "scripts/check-v31.mjs"
+      - ".github/workflows/v31-checks.yml"
+  workflow_dispatch:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run repository integrity checks
+        run: node scripts/check-v31.mjs
