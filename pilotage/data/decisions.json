@@ -114,5 +114,19 @@
       "31-8"
     ],
     "issue_url": "https://github.com/okancitak18-cmd/ataturk-heritage/issues/9"
+  },
+  {
+    "id": "DEC-014",
+    "date": "2026-11-11",
+    "title": "Revue 31-6 : widgets adaptés au volume de texte et synchronisés avec la sélection de l'application",
+    "status": "À corriger — exigences enregistrées, tests iOS en attente",
+    "rationale": "Prévenir les citations longues masquées et conserver la lisibilité. Widget moyen rectangulaire privilégié ; petit carré à expérimenter sous forme très concise. Verrouillage : référence prioritaire, date secondaire. Navigation vers fiche suivante, ouverture de la fiche dans l'app, actualisation quotidienne et manuelle dans les limites WidgetKit. Contenus éditoriaux communs à l'app ; apparence des widgets indépendante selon décision 31-5.",
+    "related_goal": "31-6",
+    "related_goals": [
+      "31-6",
+      "31-7",
+      "31-8"
+    ],
+    "issue_url": "https://github.com/okancitak18-cmd/ataturk-heritage/issues/10"
   }
 ]

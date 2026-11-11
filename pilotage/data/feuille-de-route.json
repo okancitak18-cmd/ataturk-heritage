@@ -305,20 +305,40 @@
         {
           "id": "31-6",
           "title": "Simulation widgets d'accueil et de verrouillage",
-          "status": "fait",
-          "notes": "Simulation web ; non widgets iOS effectifs"
+          "status": "a_valider",
+          "notes": "Revue du 11/11/2026 : À corriger. Widgets web visuellement satisfaisants ; éviter les citations/événements tronqués (texte condensé ou extrait explicitement indiqué, pas de faux verbatim). Widget rectangulaire moyen recommandé pour photo + texte ; tester carré petit avec contenu très bref, facultatif, et grand pour plus de détail. Verrouillage : texte historique prioritaire, date secondaire si espace. Activer « suivant » via App Intents et ouvrir la fiche dans l'app via lien profond ; contenu des widgets aligné sur la sélection de l'app, sans mode éditorial propre. Thèmes/clair-sombre indépendants restent décidés en 31-5. Actualisation quotidienne + manuelle quand possible, soumis aux contraintes WidgetKit. Ticket #10, liens 31-7/31-8.",
+          "review": {
+            "date": "2026-11-11",
+            "decision": "À corriger",
+            "positive": [
+              "Design général des simulations d'accueil satisfaisant sauf longs textes",
+              "Widget de verrouillage jugé satisfaisant"
+            ],
+            "corrections": [
+              "Prévenir troncature des textes longs : stratégies dépendant de la taille, extrait clairement identifié et ouverture vers le texte intégral sans altérer le sens",
+              "Widget moyen rectangulaire comme format recommandé ; évaluer petit carré à contenu minimal, optionnel",
+              "Widget verrouillé : citation ou événement prioritaire, puis date selon espace",
+              "Bouton suivant via App Intents et accès à la fiche complète via lien profond pour les surfaces prises en charge",
+              "Conserver le même contenu que dans l'application, sans choix citation/événement spécifique aux widgets",
+              "Mise à jour quotidienne et renouvellement manuel, dans les limites des timelines WidgetKit"
+            ],
+            "clarification": "Les réglages d'apparence indépendants app / widgets arrêtés en 31-5 restent compatibles : seuls les choix éditoriaux du contenu sont partagés.",
+            "implementation_status": "Prévu, non implémenté dans des widgets natifs testés",
+            "source_code": "ios/v2_snapshot/Widgets/HeritageWidgets.swift (snapshot partiel, non compilé)",
+            "issue_url": "https://github.com/okancitak18-cmd/ataturk-heritage/issues/10"
+          }
         },
         {
           "id": "31-7",
           "title": "Véritable bouton « citation suivante » dans widget iOS (App Intents)",
           "status": "non_commence",
-          "notes": "Nécessite portage natif / tests iOS"
+          "notes": "Nécessite portage natif / tests iOS ; Revue 31-6 : nécessité confirmée de naviguer au contenu suivant directement dans le widget via App Intents, et d'ouvrir la fiche complète de l'app ; lié au ticket #10."
         },
         {
           "id": "31-8",
           "title": "Choix de mode de widget et thème sur iOS",
           "status": "non_commence",
-          "notes": "Configuration native à implémenter ; À coordonner avec la revue 31-5 et issue #9 : thèmes et apparences clairs/sombres indépendants pour l'app, widgets accueil/verrouillage."
+          "notes": "Configuration native à implémenter ; À coordonner avec la revue 31-5 et issue #9 : thèmes et apparences clairs/sombres indépendants pour l'app, widgets accueil/verrouillage. ; Revue 31-6 : thème et apparence indépendants par widget, mais sélection éditoriale de citations/événements commune à l'application ; aucun réglage de type de contenu propre au widget."
         },
         {
           "id": "31-9",
@@ -583,8 +603,8 @@
   ],
   "review_resume": {
     "status": "en_cours",
-    "resume_at_goal": "31-6",
-    "resume_title": "Simulation widgets d'accueil et de verrouillage",
-    "notes": "Objectif 31-5 revu le 11/11/2026 : À corriger. Heritage par défaut, mode sombre pour trois thèmes, Republic rouge ancien à documenter, Archive conservé, réglages mémorisés et indépendants app/widgets. Ticket #9. Reprendre à 31-6."
+    "resume_at_goal": "31-7",
+    "resume_title": "Véritable bouton « citation suivante » dans widget iOS (App Intents)",
+    "notes": "Revue 31-6 terminée avec décision À corriger (ticket #10). Taille moyenne recommandée, petit carré à expérimenter sous forme minimale, texte jamais tronqué de façon trompeuse, renouvellement quotidien et manuel, contenu aligné à l'app, thème indépendant. Poursuivre à 31-7."
   }
 }
