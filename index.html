@@ -119,6 +119,14 @@ body{background:var(--canvas);overscroll-behavior:none}
 .settings-inner select{border:1px solid var(--line);background:var(--canvas);color:var(--ink);border-radius:11px;padding:11px;width:100%;min-height:43px}
 .settings-group{border-top:1px solid var(--line);padding-top:12px;margin-top:18px}
 .settings-close{float:right;border:1px solid var(--line);border-radius:50%;background:var(--canvas);color:var(--wine);width:38px;height:38px}
+
+/* Widget and compact display appearance tests; theme colors use shared tokens */
+[data-appearance="dark"] .widget{background:var(--paper);color:var(--ink);border:1px solid var(--line)}
+[data-appearance="dark"] .widgetcopy small,[data-appearance="dark"] .widgetcopy .sub{color:var(--wine)}
+[data-appearance="dark"] .widgetcontrols button{background:var(--canvas);color:var(--wine);border-color:var(--line)}
+[data-appearance="dark"] .lockwidget{border-color:#f0e5d366;color:#f9f0e6}
+[data-appearance="dark"] .homesim{background:linear-gradient(150deg,var(--wine-strong),#211c23 67%,#100e11)}
+[data-appearance="dark"] .locksim{background:linear-gradient(150deg,#282028,#120f12)}
 </style>
 
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -173,7 +181,7 @@ function updateStylePreference(surface,prop,value){
  if(!surfaces.includes(surface)||!['theme','appearance'].includes(prop))return;
  if(prop==='theme'&&!themeLabels[value]||prop==='appearance'&&!appearanceLabels[value])return;
  stylePrefs[surface][prop]=value;try{localStorage.setItem('heritage.v31.stylePrefs',JSON.stringify(stylePrefs))}catch(_){}
- if(surface===(state.mode==='home'?'home':state.mode==='lock'?'lock':'app')){pendingScroll=el('appscroll')?.scrollTop||null;render(false);}
+ if(surface===(state.mode==='home'?'home':state.mode==='lock'?'lock':'app')){pendingScroll=el('appscroll')?.scrollTop??0;render(false);}
 }
 function styleChoices(surface){
  const val=stylePrefs[surface];
