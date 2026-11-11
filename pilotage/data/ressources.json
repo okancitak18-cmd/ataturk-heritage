@@ -1,0 +1,86 @@
+[
+  {
+    "category": "Production",
+    "name": "Démonstration mobile V3.1",
+    "url": "https://okancitak18-cmd.github.io/ataturk-heritage/",
+    "detail": "Site mobile-first, thème Heritage, simulation du 29 octobre",
+    "kind": "site"
+  },
+  {
+    "category": "Production",
+    "name": "Laboratoire complet V3.1",
+    "url": "https://okancitak18-cmd.github.io/ataturk-heritage/laboratoire.html",
+    "detail": "Sélecteur de date, thèmes, widgets simulés et archives",
+    "kind": "site"
+  },
+  {
+    "category": "Code et pilotage",
+    "name": "Dépôt GitHub",
+    "url": "https://github.com/okancitak18-cmd/ataturk-heritage",
+    "detail": "Référence des versions et futurs développements",
+    "kind": "github"
+  },
+  {
+    "category": "Code et pilotage",
+    "name": "Historique des modifications",
+    "url": "https://github.com/okancitak18-cmd/ataturk-heritage/commits/main",
+    "detail": "Traçabilité des changements et retours arrière",
+    "kind": "github"
+  },
+  {
+    "category": "Code et pilotage",
+    "name": "Tableau des demandes et anomalies",
+    "url": "https://github.com/okancitak18-cmd/ataturk-heritage/issues",
+    "detail": "Ouvrir et suivre des tickets ; à organiser par versions",
+    "kind": "github"
+  },
+  {
+    "category": "Code et pilotage",
+    "name": "GitHub Pages — paramètres",
+    "url": "https://github.com/okancitak18-cmd/ataturk-heritage/settings/pages",
+    "detail": "Publication et configuration du site",
+    "kind": "github"
+  },
+  {
+    "category": "Sources",
+    "name": "Atatürk Araştırma Merkezi",
+    "url": "https://atam.gov.tr/",
+    "detail": "Publications, fonds et recherches documentaires sur Atatürk",
+    "kind": "source"
+  },
+  {
+    "category": "Sources",
+    "name": "Chronologie — Ministère turc de la Défense",
+    "url": "https://ata.msb.gov.tr/Sayfa/SayfaGoster/ataturk-kronolojisi",
+    "detail": "Dates et événements de la vie d’Atatürk",
+    "kind": "source"
+  },
+  {
+    "category": "Sources",
+    "name": "Chronologie — Ministère turc de l’Éducation",
+    "url": "https://meb.gov.tr/ataturk/Hayati/Kronoloji",
+    "detail": "Chronologie institutionnelle de référence",
+    "kind": "source"
+  },
+  {
+    "category": "Sources",
+    "name": "Library of Congress",
+    "url": "https://www.loc.gov/",
+    "detail": "Photographies, publications et collections historiques",
+    "kind": "source"
+  },
+  {
+    "category": "Sources",
+    "name": "SALT Research",
+    "url": "https://archives.saltresearch.org/",
+    "detail": "Photographies et documents d'archives turques",
+    "kind": "source"
+  },
+  {
+    "category": "Sources",
+    "name": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/",
+    "detail": "Distribution de fichiers ; licences à examiner individuellement",
+    "kind": "source"
+  }
+]

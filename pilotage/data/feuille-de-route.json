@@ -1,0 +1,455 @@
+{
+  "schema_version": "1.0",
+  "last_updated": "2026-11-10",
+  "status_legend": {
+    "fait": "Implémenté (pas nécessairement validé sur iOS)",
+    "a_valider": "À revoir / vérifier / confirmer",
+    "non_commence": "Non implémenté",
+    "bloque": "Bloqué par une dépendance",
+    "idee": "Option future"
+  },
+  "release_rule": "Ne jamais confondre « Fait dans l'aperçu web » et « validé dans l'application native ».",
+  "versions": [
+    {
+      "id": "V1",
+      "name": "Fondations",
+      "focus": "Premier prototype historique et iOS",
+      "objective": "Créer une expérience quotidienne de découverte et les premières bases native/web.",
+      "status": "livre_partiel",
+      "goals": [
+        {
+          "id": "v1-1",
+          "title": "Registre initial de citations et événements (61 références)",
+          "status": "fait",
+          "notes": "Structure initiale obtenue ; non exhaustif"
+        },
+        {
+          "id": "v1-2",
+          "title": "Dates, texte turc, traduction, sources, photographie associée",
+          "status": "fait",
+          "notes": "Schéma créé ; relecture historique de fond ouverte"
+        },
+        {
+          "id": "v1-3",
+          "title": "Logique de sélection quotidienne par anniversaire",
+          "status": "fait",
+          "notes": "Présente dans le prototype ; tests de cas"
+        },
+        {
+          "id": "v1-4",
+          "title": "Interface native SwiftUI et navigation entre fiches",
+          "status": "fait",
+          "notes": "Code source préparé, pas d'installation iOS prouvée"
+        },
+        {
+          "id": "v1-5",
+          "title": "Extension WidgetKit accueil et verrouillage",
+          "status": "a_valider",
+          "notes": "Code source écrit ; tests natifs non réalisés"
+        },
+        {
+          "id": "v1-6",
+          "title": "Aperçu web interactif accessible dans le navigateur",
+          "status": "fait",
+          "notes": "Prototype HTML livré"
+        },
+        {
+          "id": "v1-7",
+          "title": "Photographies d'époque avec provenance",
+          "status": "a_valider",
+          "notes": "Première sélection ; conformité des droits à compléter"
+        },
+        {
+          "id": "v1-8",
+          "title": "Compilation, signature et essai iPhone",
+          "status": "bloque",
+          "notes": "Mac/Xcode, signature et contrôle sur appareil requis"
+        }
+      ]
+    },
+    {
+      "id": "V2",
+      "name": "Archives enrichies",
+      "focus": "Registre, photothèque, traçabilité",
+      "objective": "Étendre le corpus au-delà de 150 références et enrichir les photographies historiques.",
+      "status": "livre_partiel",
+      "goals": [
+        {
+          "id": "v2-1",
+          "title": "Porter le registre au-delà de 150 fiches",
+          "status": "fait",
+          "notes": "235 fiches, 48 citations et 187 événements"
+        },
+        {
+          "id": "v2-2",
+          "title": "Conserver la granularité réelle de datation",
+          "status": "fait",
+          "notes": "33 citations au jour, 15 à l'année ; pas de fausse date"
+        },
+        {
+          "id": "v2-3",
+          "title": "Développer la photothèque historique sourcée",
+          "status": "fait",
+          "notes": "24 visuels recensés, dont 22 photos et 2 documents de presse"
+        },
+        {
+          "id": "v2-4",
+          "title": "Consulter les archives par recherche et navigation",
+          "status": "fait",
+          "notes": "Interface web ; application SwiftUI préparée"
+        },
+        {
+          "id": "v2-5",
+          "title": "Fiches de provenance et résolutions originales",
+          "status": "a_valider",
+          "notes": "Métadonnées présentes ; licences/URL à contrôler une par une"
+        },
+        {
+          "id": "v2-6",
+          "title": "Intégrer des images haute qualité et éviter l'IA générative",
+          "status": "fait",
+          "notes": "Photographies historiques exclusivement ; résolution variable"
+        },
+        {
+          "id": "v2-7",
+          "title": "Privilégier Instagram pour découverte, puis vérifier les archives originales",
+          "status": "a_valider",
+          "notes": "Sélection institutionnelle privilégiée ; repérage social non systématisé"
+        },
+        {
+          "id": "v2-8",
+          "title": "Valider chaque citation dans la source primaire",
+          "status": "a_valider",
+          "notes": "Corpus initial non encore certifié exhaustivement"
+        },
+        {
+          "id": "v2-9",
+          "title": "Tester chargement réel de chaque photographie sur Safari et iOS",
+          "status": "a_valider",
+          "notes": "Blocage réseau dans tests précédents"
+        },
+        {
+          "id": "v2-10",
+          "title": "Compiler l'application native V2",
+          "status": "bloque",
+          "notes": "Analyse syntaxique uniquement ; compilation Apple non réalisée"
+        }
+      ]
+    },
+    {
+      "id": "V3.1",
+      "name": "Expérience immersive",
+      "focus": "Application web iPhone et widgets interactifs",
+      "objective": "Faire de la découverte quotidienne une expérience visuelle premium et tester chaque écran sur web et iOS.",
+      "status": "en_cours",
+      "goals": [
+        {
+          "id": "31-1",
+          "title": "Interface application V3.1 mobile-first, thème Heritage",
+          "status": "fait",
+          "notes": "Page GitHub publiée ; vérifier sur Safari réel"
+        },
+        {
+          "id": "31-2",
+          "title": "Date de simulation 29 octobre 2026",
+          "status": "fait",
+          "notes": "Paramètre initial du laboratoire"
+        },
+        {
+          "id": "31-3",
+          "title": "Navigation immersive entre citations et événements",
+          "status": "fait",
+          "notes": "Défilement et cartes disponibles dans le prototype web"
+        },
+        {
+          "id": "31-4",
+          "title": "Galerie d'archives et consultation des photographies",
+          "status": "fait",
+          "notes": "24 fiches dans le laboratoire web"
+        },
+        {
+          "id": "31-5",
+          "title": "Trois thèmes Heritage / Republic / Archive",
+          "status": "fait",
+          "notes": "Thèmes disponibles dans la démonstration"
+        },
+        {
+          "id": "31-6",
+          "title": "Simulation widgets d'accueil et de verrouillage",
+          "status": "fait",
+          "notes": "Simulation web ; non widgets iOS effectifs"
+        },
+        {
+          "id": "31-7",
+          "title": "Véritable bouton « citation suivante » dans widget iOS (App Intents)",
+          "status": "non_commence",
+          "notes": "Nécessite portage natif / tests iOS"
+        },
+        {
+          "id": "31-8",
+          "title": "Choix de mode de widget et thème sur iOS",
+          "status": "non_commence",
+          "notes": "Configuration native à implémenter"
+        },
+        {
+          "id": "31-9",
+          "title": "Navigation photographique pleine page, zoom et contexte au geste",
+          "status": "a_valider",
+          "notes": "Fonctions partielles ; interactions spécifiques à finaliser"
+        },
+        {
+          "id": "31-10",
+          "title": "Synchronisation fonctionnelle web ↔ iOS sur un même référentiel",
+          "status": "non_commence",
+          "notes": "Données encore embarquées ; source JSON commune à construire"
+        },
+        {
+          "id": "31-11",
+          "title": "Test accessibilité, VoiceOver, Safe Area et iPhone réel",
+          "status": "a_valider",
+          "notes": "Essais navigateur uniquement"
+        },
+        {
+          "id": "31-12",
+          "title": "Publication GitHub Pages avec accès au laboratoire complet",
+          "status": "fait",
+          "notes": "Code publié ; accessibilité finale à contrôler sur téléphone"
+        }
+      ]
+    },
+    {
+      "id": "V3.2",
+      "name": "Exploration historique",
+      "focus": "Comprendre le contexte et parcourir l'histoire",
+      "objective": "Transformer les fiches en parcours historiques interactifs et vérifiables.",
+      "status": "planifie",
+      "goals": [
+        {
+          "id": "32-1",
+          "title": "Fiche « L'histoire derrière la citation »",
+          "status": "non_commence",
+          "notes": "Source, date, lieu, contexte et portée"
+        },
+        {
+          "id": "32-2",
+          "title": "Frise chronologique interactive 1881–1938",
+          "status": "non_commence",
+          "notes": "Périodes, événements et citations liés"
+        },
+        {
+          "id": "32-3",
+          "title": "Collections thématiques (science, paix, République, société…)",
+          "status": "non_commence",
+          "notes": "Classification éditoriale et navigation"
+        },
+        {
+          "id": "32-4",
+          "title": "Carte historique interactive des lieux et déplacements",
+          "status": "non_commence",
+          "notes": "Géolocalisations sourcées ; frontières d'époque"
+        },
+        {
+          "id": "32-5",
+          "title": "Liens entre personnes, lieux, événements et documents",
+          "status": "non_commence",
+          "notes": "Modèle de relations à définir"
+        },
+        {
+          "id": "32-6",
+          "title": "Filtres de dates, périodes, thèmes et formats",
+          "status": "non_commence",
+          "notes": "UX de recherche historique"
+        },
+        {
+          "id": "32-7",
+          "title": "Parcours web et natif alignés",
+          "status": "non_commence",
+          "notes": "Même contenu et règles métier"
+        },
+        {
+          "id": "32-8",
+          "title": "Relecture contextualisée des éléments sensibles ou débattus",
+          "status": "non_commence",
+          "notes": "Prévoir neutralité et références"
+        }
+      ]
+    },
+    {
+      "id": "V3.3",
+      "name": "Partager et revenir",
+      "focus": "Transmission et découverte régulière",
+      "objective": "Faciliter le partage fidèle des contenus et la consultation quotidienne choisie.",
+      "status": "planifie",
+      "goals": [
+        {
+          "id": "33-1",
+          "title": "Cartes de partage Story Instagram 9:16",
+          "status": "non_commence",
+          "notes": "Photo réelle, citation et attribution"
+        },
+        {
+          "id": "33-2",
+          "title": "Formats publication carrée et fond d'écran",
+          "status": "non_commence",
+          "notes": "Exports visuels de qualité"
+        },
+        {
+          "id": "33-3",
+          "title": "Partage via WhatsApp et feuille de partage iOS",
+          "status": "non_commence",
+          "notes": "Share Sheet native + partage web"
+        },
+        {
+          "id": "33-4",
+          "title": "Notifications culturelles configurables",
+          "status": "non_commence",
+          "notes": "Consentement explicite, horaires et fréquence"
+        },
+        {
+          "id": "33-5",
+          "title": "Éphéméride et sélection du jour (fallback transparent)",
+          "status": "a_valider",
+          "notes": "Logique existe ; UX et test de couverture à revoir"
+        },
+        {
+          "id": "33-6",
+          "title": "Favoris personnels et collections sauvegardées",
+          "status": "a_valider",
+          "notes": "Favoris du prototype ; synchronisation non prévue"
+        },
+        {
+          "id": "33-7",
+          "title": "Citation surprise et découverte en un geste",
+          "status": "non_commence",
+          "notes": "Sélection non répétitive et traçable"
+        },
+        {
+          "id": "33-8",
+          "title": "« Une minute d'histoire » et parcours courts",
+          "status": "non_commence",
+          "notes": "Contenus pédagogiques sourcés"
+        },
+        {
+          "id": "33-9",
+          "title": "Règles de droits et métadonnées dans les exports",
+          "status": "non_commence",
+          "notes": "Publication sous contraintes de licences"
+        }
+      ]
+    },
+    {
+      "id": "V3.4",
+      "name": "Bibliothèque de confiance",
+      "focus": "Archives, vérification, qualité et pérennité",
+      "objective": "Assurer une traçabilité documentaire de niveau éditorial et stabiliser les livrables.",
+      "status": "planifie",
+      "goals": [
+        {
+          "id": "34-1",
+          "title": "Fiche source primaire complète par citation",
+          "status": "non_commence",
+          "notes": "Transcription, traduction, bibliographie, URL"
+        },
+        {
+          "id": "34-2",
+          "title": "Statut d'authenticité et de précision datée",
+          "status": "non_commence",
+          "notes": "Confirmé / secondaire / incertain"
+        },
+        {
+          "id": "34-3",
+          "title": "Accès aux documents originaux (fac-similés)",
+          "status": "non_commence",
+          "notes": "Vérifier droits et disponibilité"
+        },
+        {
+          "id": "34-4",
+          "title": "Recherche avancée dans le corpus",
+          "status": "non_commence",
+          "notes": "Turc/français, mots-clés, lieu, période"
+        },
+        {
+          "id": "34-5",
+          "title": "Vérifier tous les liens, métadonnées et droits des 24 photos",
+          "status": "non_commence",
+          "notes": "Conformité avant publication"
+        },
+        {
+          "id": "34-6",
+          "title": "Relecture des 235 références et correction des attributions",
+          "status": "non_commence",
+          "notes": "Validation éditoriale ligne par ligne"
+        },
+        {
+          "id": "34-7",
+          "title": "Tests automatisés continus du référentiel et du site",
+          "status": "non_commence",
+          "notes": "Checks de schéma, CI et régressions"
+        },
+        {
+          "id": "34-8",
+          "title": "Audit accessibilité et comportement hors connexion",
+          "status": "non_commence",
+          "notes": "Web et iOS"
+        },
+        {
+          "id": "34-9",
+          "title": "Compiler et tester natif iOS sur appareil réel",
+          "status": "bloque",
+          "notes": "Xcode/signature et accès à iPhone"
+        },
+        {
+          "id": "34-10",
+          "title": "Préparer le paquet de diffusion et un protocole de publication",
+          "status": "non_commence",
+          "notes": "Après validation des droits et tests"
+        }
+      ]
+    },
+    {
+      "id": "V4+",
+      "name": "Évolutions ultérieures",
+      "focus": "Expériences audiovisuelles et langues",
+      "objective": "Étendre l'expérience lorsque la V3 sera stabilisée et validée.",
+      "status": "idee",
+      "goals": [
+        {
+          "id": "4-1",
+          "title": "Lecture audio et archives audiovisuelles authentifiées",
+          "status": "idee",
+          "notes": "Jamais de voix synthétique déguisée en archive"
+        },
+        {
+          "id": "4-2",
+          "title": "Multilingue avancé",
+          "status": "idee",
+          "notes": "Turc, anglais, français puis autres langues"
+        },
+        {
+          "id": "4-3",
+          "title": "Recherche assistée par IA strictement liée aux sources",
+          "status": "idee",
+          "notes": "Réponses citées et transparence des limites"
+        },
+        {
+          "id": "4-4",
+          "title": "Apple Watch et complications",
+          "status": "idee",
+          "notes": "Validation native ultérieure"
+        },
+        {
+          "id": "4-5",
+          "title": "Mode hors connexion et photothèque autorisée",
+          "status": "idee",
+          "notes": "Stockage selon licences"
+        },
+        {
+          "id": "4-6",
+          "title": "Contributions communautaires modérées",
+          "status": "idee",
+          "notes": "Références obligatoires"
+        }
+      ]
+    }
+  ]
+}

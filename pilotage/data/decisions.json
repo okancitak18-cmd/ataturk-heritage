@@ -1,0 +1,44 @@
+[
+  {
+    "id": "DEC-001",
+    "date": "2026-11-10",
+    "title": "Positionnement culturel et musée quotidien",
+    "status": "Adopté",
+    "rationale": "Faire découvrir, comprendre et transmettre des connaissances historiques vérifiables."
+  },
+  {
+    "id": "DEC-002",
+    "date": "2026-11-10",
+    "title": "Photographies authentiques uniquement",
+    "status": "Adopté",
+    "rationale": "Aucune représentation historique générée par IA ; conservation des sources."
+  },
+  {
+    "id": "DEC-003",
+    "date": "2026-11-10",
+    "title": "Approche iOS natif + laboratoire web",
+    "status": "Adopté",
+    "rationale": "Tester le produit en continu sans confondre simulateur web et iOS natif."
+  },
+  {
+    "id": "DEC-004",
+    "date": "2026-11-10",
+    "title": "Roadmap V3.1 à V3.4 puis V4",
+    "status": "Adopté",
+    "rationale": "Livraison incrémentale et contrôle d'étape à chaque version."
+  },
+  {
+    "id": "DEC-005",
+    "date": "2026-11-10",
+    "title": "GitHub comme source durable des décisions et données",
+    "status": "Adopté",
+    "rationale": "Historique, diffusion du prototype, registre des changements et reprise intersessions."
+  },
+  {
+    "id": "DEC-006",
+    "date": "2026-11-10",
+    "title": "Validation historique avant distribution",
+    "status": "Adopté",
+    "rationale": "Le contenu doit être recontextualisé et les attributions vérifiées, sans faux jour exact."
+  }
+]

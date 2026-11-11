@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0",
+  "last_reviewed": "2026-11-10",
+  "version": "V3.1 — prototype web",
+  "name": "ATATÜRK Heritage",
+  "short_name": "Heritage",
+  "tagline": "Une date. Une pensée. Son histoire.",
+  "mission": "Un musée historique personnel, accessible quotidiennement sur iPhone, avec une expérience à la fois esthétique, culturelle et éducative.",
+  "raison_etre": "Rendre accessibles, intelligibles et transmissibles les paroles documentées, décisions et moments historiques associés à Mustafa Kemal Atatürk entre 1881 et 1938.",
+  "audience_primary": "Personnes intéressées par Atatürk, l’histoire de la Turquie et son patrimoine culturel, notamment utilisateurs d’iPhone ; public turc et diaspora.",
+  "audience_secondary": "Étudiants, enseignants, passionnés d'histoire et personnes découvrant la République turque.",
+  "ambitions": [
+    {
+      "key": "Découvrir",
+      "value": "Apprendre quelque chose sur Atatürk chaque jour, sans effort."
+    },
+    {
+      "key": "Comprendre",
+      "value": "Accéder au contexte historique de ses déclarations, de ses décisions et des transformations de son époque."
+    },
+    {
+      "key": "Transmettre",
+      "value": "Partager des connaissances historiques et des valeurs universelles à travers des contenus visuels de grande qualité."
+    }
+  ],
+  "editorial_ambition": "Mettre en valeur l'héritage historique et culturel d'Atatürk sans transformer l'application en simple collection de formules inspirantes.",
+  "editorial_principles": [
+    "Priorité aux citations authentifiées et datées ; ne jamais inventer une date exacte.",
+    "Texte original turc, traduction clairement signalée et contexte critique.",
+    "Distinction entre fait historique, citation documentée et attribution incertaine.",
+    "Photographies d'archives réelles, jamais de portraits historiques générés par IA.",
+    "Chaque citation, événement et photographie présente une source et son statut de vérification.",
+    "Présentation des faits sans effacer les débats historiques ni transformer l'application en outil partisan.",
+    "Accessibilité, simplicité, respect de la vie privée et expérience calme sans mécanismes de dépendance."
+  ],
+  "platforms": {
+    "native": "iOS (SwiftUI + WidgetKit ; App Intents prévu)",
+    "preview": "Web responsive (HTML, CSS, JavaScript), GitHub Pages",
+    "deployment": "GitHub Pages pour la démonstration ; distribution iOS native non réalisée"
+  },
+  "languages": {
+    "original": "Turc",
+    "interface_current": "Français (prototype)",
+    "planned": [
+      "Turc",
+      "Anglais",
+      "Français"
+    ],
+    "other_future": [
+      "Allemand",
+      "Portugais brésilien"
+    ]
+  },
+  "identity": {
+    "primary": "#742D3C",
+    "paper": "#F7F3EB",
+    "ink": "#2B2826",
+    "typography": "Sérif éditoriale pour citations, sans-sérif lisible pour navigation",
+    "themes": [
+      "Heritage",
+      "Republic",
+      "Archive"
+    ]
+  },
+  "content_strategy": "Citation au jour exact prioritaire ; à défaut événement daté. Si aucune donnée du jour, découverte éditoriale explicitement marquée sans fausse attribution temporelle.",
+  "content_counts": {
+    "records": 235,
+    "quotes": 48,
+    "events": 187,
+    "dated_quotes": 33,
+    "year_only_quotes": 15,
+    "dated_events": 177,
+    "year_only_events": 10,
+    "photos": 24
+  },
+  "privacy": "Pas de compte utilisateur ni de collecte de données personnelles dans V2 ; favoris locaux. Vérification nécessaire avant toute fonctionnalité analytique.",
+  "business_model": "Accès culturel fondamental gratuit ; aucune monétisation ni publicité intégrée au prototype.",
+  "repository": "https://github.com/okancitak18-cmd/ataturk-heritage",
+  "site": "https://okancitak18-cmd.github.io/ataturk-heritage/",
+  "owner_role": "Porteur du projet / validation éditoriale et produit",
+  "quality_gate": "Une fonction passe à « Validé » uniquement après contrôle fonctionnel, éditorial et, si applicable, test sur iOS réel.",
+  "change_policy": "Les modifications faites dans le navigateur sont d'abord locales. Pour devenir la référence des prochaines sessions, exporter le JSON et le committer dans le dépôt GitHub."
+}

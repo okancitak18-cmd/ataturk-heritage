@@ -1,0 +1,74 @@
+[
+  {
+    "id": "R-001",
+    "priority": "Critique",
+    "area": "iOS",
+    "subject": "Application native non compilée ni testée sur iPhone",
+    "impact": "Aucune garantie de fonctionnement Widgets/App Intents sur appareil",
+    "next": "Copier les sources V2 dans GitHub, configurer Xcode et lancer build sur macOS",
+    "state": "Ouvert"
+  },
+  {
+    "id": "R-002",
+    "priority": "Critique",
+    "area": "Archives",
+    "subject": "Authentification documentaire non exhaustive",
+    "impact": "Risque d'attribution ou de date erronée",
+    "next": "Contrôle des 235 fiches et confrontation aux sources primaires",
+    "state": "Ouvert"
+  },
+  {
+    "id": "R-003",
+    "priority": "Élevée",
+    "area": "Photographies",
+    "subject": "Licences, provenance et URLs des 24 visuels à auditer",
+    "impact": "Publication et chargement d'images non garantis",
+    "next": "Documenter source primaire, licence et test réseau de chaque fichier",
+    "state": "Ouvert"
+  },
+  {
+    "id": "R-004",
+    "priority": "Élevée",
+    "area": "Architecture",
+    "subject": "Pas encore de source JSON partagée entre web V3.1 et projet natif V2",
+    "impact": "Risque de divergence du contenu entre plateformes",
+    "next": "Créer pipeline de génération à partir des données versionnées",
+    "state": "Ouvert"
+  },
+  {
+    "id": "R-005",
+    "priority": "Élevée",
+    "area": "GitHub",
+    "subject": "Projet natif V2 non encore copié intégralement dans le dépôt",
+    "impact": "Archives techniques fragmentées",
+    "next": "Importer sources Swift et historique documentaire en commit dédié",
+    "state": "Ouvert"
+  },
+  {
+    "id": "R-006",
+    "priority": "Moyenne",
+    "area": "Web",
+    "subject": "Vérification manuelle Safari iPhone et images distantes",
+    "impact": "Qualité visuelle non prouvée sur appareil réel",
+    "next": "Recette Safari, navigation tactile, chargement des photos",
+    "state": "Ouvert"
+  },
+  {
+    "id": "R-007",
+    "priority": "Moyenne",
+    "area": "Produit",
+    "subject": "Recette de fonctionnalités et acceptation par version non formalisées",
+    "impact": "Risques de fonctionnalités réputées livrées sans validation",
+    "next": "Appliquer critères de validation et registre de décisions",
+    "state": "En traitement"
+  },
+  {
+    "id": "R-008",
+    "priority": "Moyenne",
+    "area": "Gouvernance",
+    "subject": "Modifications du tableau de bord non automatiquement écrites sur GitHub",
+    "impact": "Une édition locale peut ne pas être conservée entre sessions",
+    "next": "Exporter les JSON puis committer dans /pilotage/data/ ; étudier workflow PR",
+    "state": "Documenté"
+  }
+]
