@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "last_updated": "2026-11-10",
+  "last_updated": "2026-11-11",
   "status_legend": {
     "fait": "Implémenté (pas nécessairement validé sur iOS)",
     "a_valider": "À revoir / vérifier / confirmer",
@@ -146,8 +146,24 @@
         {
           "id": "31-1",
           "title": "Interface application V3.1 mobile-first, thème Heritage",
-          "status": "fait",
-          "notes": "Page GitHub publiée ; vérifier sur Safari réel"
+          "status": "a_valider",
+          "notes": "Revue utilisateur du 11/11/2026 : direction artistique, thèmes, proportions photo/texte et style épuré appréciés. À approfondir : swipe horizontal entre fiches, glissement vertical vers le contexte et animations plus naturelles sur iPhone. Tester une variante sobre et une variante utilisant discrètement Liquid Glass sur les contrôles, sans altérer l'identité Heritage. Décision expérimentale seulement ; voir issue #5.",
+          "review": {
+            "date": "2026-11-11",
+            "decision": "À approfondir",
+            "positive": [
+              "Widgets écran d'accueil/verrouillage visuellement réussis et épurés",
+              "Thèmes alignés à la direction artistique",
+              "Minimalisme et proportions photographies/textes satisfaisants"
+            ],
+            "improvements": [
+              "Transitions horizontales plus douces et perceptibles",
+              "Découverte verticale du contexte plus intuitive",
+              "Tester sans engagement un habillage Liquid Glass pour les éléments de navigation"
+            ],
+            "implementation_status": "à expérimenter puis valider, sans refonte de la direction artistique",
+            "issue_url": "https://github.com/okancitak18-cmd/ataturk-heritage/issues/5"
+          }
         },
         {
           "id": "31-2",

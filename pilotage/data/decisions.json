@@ -40,5 +40,14 @@
     "title": "Validation historique avant distribution",
     "status": "Adopté",
     "rationale": "Le contenu doit être recontextualisé et les attributions vérifiées, sans faux jour exact."
+  },
+  {
+    "id": "DEC-007",
+    "date": "2026-11-11",
+    "title": "Revue 31-1 : conserver l'identité Heritage et explorer une meilleure gestuelle iPhone",
+    "status": "À approfondir — non validé",
+    "rationale": "L'esthétique épurée, les thèmes, les widgets simulés et les proportions photographie/texte sont appréciés. La navigation horizontale et l'ouverture verticale du contexte doivent gagner en fluidité. Liquid Glass sera évalué uniquement comme option d'interaction discrète, sans adoption automatique ni changement de la direction artistique.",
+    "related_goal": "31-1",
+    "issue_url": "https://github.com/okancitak18-cmd/ataturk-heritage/issues/5"
   }
 ]
