@@ -359,8 +359,26 @@
         {
           "id": "31-8",
           "title": "Choix de mode de widget et thème sur iOS",
-          "status": "non_commence",
-          "notes": "Configuration native à implémenter ; À coordonner avec la revue 31-5 et issue #9 : thèmes et apparences clairs/sombres indépendants pour l'app, widgets accueil/verrouillage. ; Revue 31-6 : thème et apparence indépendants par widget, mais sélection éditoriale de citations/événements commune à l'application ; aucun réglage de type de contenu propre au widget."
+          "status": "a_valider",
+          "notes": "Revue 11/11/2026 : À approfondir. Accès aux réglages par une icône discrète et accessible hors de la barre inférieure (proposition en haut de l'app). Pour chaque thème Heritage/Republic/Archive : Clair, Sombre ou Automatique suivant l'apparence système iOS ; mémoriser et appliquer sans aperçu en direct. Configurer thème et apparence des widgets accueil/verrouillage exclusivement depuis les réglages de l'application, indépendamment de l'apparence de l'app ; contenu historique partagé avec l'app. Tests SwiftUI/WidgetKit, changement système et stockage partagé requis. Voir #12 et #9.",
+          "review": {
+            "date": "2026-11-11",
+            "decision": "À approfondir",
+            "requirements": [
+              "Icône Réglages discrète accessible ailleurs que dans les quatre onglets inférieurs",
+              "Pour chacun des trois thèmes : choix manuel Clair, Sombre et Automatique selon iOS",
+              "Modifier apparence des widgets dans les paramètres de l'application, et non dans un écran de configuration propre au widget",
+              "Préférences indépendantes pour application, écran d'accueil et écran verrouillé, contenu éditorial commun",
+              "Ne pas proposer d'aperçu en direct obligatoire"
+            ],
+            "implementation_status": "Spécification décidée, application iOS native non implémentée ni testée",
+            "related_goals": [
+              "31-5",
+              "31-6",
+              "31-7"
+            ],
+            "issue_url": "https://github.com/okancitak18-cmd/ataturk-heritage/issues/12"
+          }
         },
         {
           "id": "31-9",
@@ -625,8 +643,8 @@
   ],
   "review_resume": {
     "status": "en_cours",
-    "resume_at_goal": "31-8",
-    "resume_title": "Choix du mode de widget et thème sur iOS",
-    "notes": "Revue 31-7 enregistrée le 11/11/2026 : À approfondir. Actions précédent/suivant, chronologie, deep link vers la fiche affichée, widget principal unique en UX mais non techniquement exclusif iOS. Issue #11. Passer à 31-8."
+    "resume_at_goal": "31-9",
+    "resume_title": "Navigation photographique pleine page, zoom et contexte au geste",
+    "notes": "Revue 31-8 terminée le 11/11/2026 : À approfondir. Réglages discrets hors barre inférieure, mode clair/sombre/automatique et réglages widget depuis l'application, sans aperçu en direct. Ticket #12. Passer à 31-9, en cohérence avec 31-4 et ticket #8."
   }
 }
