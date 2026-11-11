@@ -41,6 +41,21 @@ Ces éléments sont soumis à la revue du propriétaire **avant la fusion**.
 - L'interface n'a pas encore bénéficié d'un test de rendu ou de gestes sur un iPhone réel. Les validations JavaScript réalisées sont **syntaxiques et structurelles uniquement**.
 - **Aucune modification du site GitHub Pages public avant autorisation explicite** ; cette proposition n'est pas une demande de publication immédiate.
 
+## Itération documentaire — index thématiques et dossiers historiques
+
+**Livré uniquement sur la branche de travail (non publié)**
+
+- **Galerie filtrable par thème** : les thèmes sont issus des fiches historiques déjà liées aux identifiants de photographies dans `data/entries_v2.json`. Le nombre de photos associées est calculé et les boutons permettent d'afficher chaque groupe. La visionneuse commence par le groupe choisi, puis poursuit dans le reste de la photothèque.
+- **Dossiers Comprendre** : conservation du texte contextuel déjà présent, datation et précision, texte turc disponible, références du même thème et d'une période proche, source citée et notice de l'illustration.
+- **Notice photographique approfondie** : métadonnées (période, provenance, dimensions si connues, déclaration de droits) et fiches du corpus réutilisant la même photographie ; pas d'affirmation que le document représente un événement donné.
+- **Aucune nouvelle citation, date, attribution ou interprétation historique inventée.** Aucun champ historique source du référentiel modifié.
+- **Interface et laboratoire** : fonctionnalités ajoutées dans les deux pages.
+
+**Restrictions et validation éditoriale :**
+Les groupes thématiques résultent de l'association existante `photoId` ↔ `theme` ; certains visuels servent d'illustration générique dans de nombreuses fiches. Ils doivent donc être compris comme des **index de navigation provisoires**, non comme des collections photographiques historiques vérifiées. Les notices restent à enrichir avec archives primaires, légendes exactes, acteurs, lieu, datation et droits. La catégorie « source déclarée » ne signifie pas « source auditée ».
+
+**Contrôle effectué :** parsing JavaScript des deux pages, présence des 235 fiches historiques et de la photothèque ; pas de test visuel Safari/iPhone ni de validation des sources externes.
+
 ## Périmètre
 
 - Affichage plein écran du musée sur toutes les largeurs d'écran ; pas de maquette de téléphone entourée de panneaux de simulation.
