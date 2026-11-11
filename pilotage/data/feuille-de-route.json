@@ -256,8 +256,25 @@
         {
           "id": "31-4",
           "title": "Galerie d'archives et consultation des photographies",
-          "status": "fait",
-          "notes": "24 fiches dans le laboratoire web"
+          "status": "a_valider",
+          "notes": "Revue utilisateur du 11/11/2026 : À corriger. Conserver grille sobre ; tester masonry et envisager réglage ultérieur. Visionneuse plein écran sombre avec zoom pincement/double tap, swipe entre photos, informations par geste/bouton. Notices enrichies avec dates, lieux, personnes, contexte, institutions, sources et droits vérifiés. Collections chronologiques/thématiques, liens documentés vers événements/citations. Auditer résolutions, authenticité, provenance et licences ; aucune image générée. Corrections acceptées en principe, à implémenter et tester web puis iOS. Voir issue #8 et objectif 31-9.",
+          "review": {
+            "date": "2026-11-11",
+            "decision": "À corriger",
+            "agreement": "Accord explicite de l'utilisateur sur les cinq recommandations",
+            "requirements": [
+              "Conserver galerie grille minimaliste, tester masonry avec ratios originaux",
+              "Plus tard : étudier réglage utilisateur grille ou masonry (non acté)",
+              "Visionneuse plein écran, fond sombre, pinch-to-zoom, double tap, swipe horizontal, informations accessibles par geste vertical et bouton",
+              "Notice riche : date/période et précision, lieu, personnes identifiées, circonstances, contexte, institution, auteur, liens de source et droits",
+              "Collections historiques chronologiques et thématiques et liens vers citations/événements seulement si vérifiés",
+              "Priorité originaux et bonne résolution, provenance/licences vérifiées, aucune image historique IA"
+            ],
+            "implementation_status": "Non implémenté, en attente d'une préversion visuelle et test iPhone",
+            "related_goal": "31-9",
+            "source_audit_issue": "https://github.com/okancitak18-cmd/ataturk-heritage/issues/3",
+            "issue_url": "https://github.com/okancitak18-cmd/ataturk-heritage/issues/8"
+          }
         },
         {
           "id": "31-5",
@@ -287,7 +304,7 @@
           "id": "31-9",
           "title": "Navigation photographique pleine page, zoom et contexte au geste",
           "status": "a_valider",
-          "notes": "Fonctions partielles ; interactions spécifiques à finaliser"
+          "notes": "Fonctions partielles ; interactions spécifiques à finaliser ; Fonctionnalités à développer conjointement avec l'objectif 31-4 et le ticket #8 (plein écran, pinch zoom, double tap, swipe, notice par geste/bouton)."
         },
         {
           "id": "31-10",
@@ -545,9 +562,9 @@
     }
   ],
   "review_resume": {
-    "status": "en_pause",
-    "resume_at_goal": "31-4",
-    "resume_title": "Galerie d'archives photographiques",
-    "notes": "Retours V3.1.1 du 11/11 enregistrés : gestes web OK ; Liquid Glass et animations à revoir sur iPhone ; éphéméride web OK ; retour Archives fonctionnel mais bouton à raffiner ; dossiers historiques à enrichir ; icône vintage caméra et suppression des aides permanentes. Reprise à l'objectif 31-4."
+    "status": "en_cours",
+    "resume_at_goal": "31-5",
+    "resume_title": "Trois thèmes Heritage / Republic / Archive",
+    "notes": "Revue 31-4 terminée le 11/11/2026 avec décision À corriger, exigences enregistrées dans l'issue #8. Poursuivre à l'objectif 31-5 ; 31-1 à 31-4 restent à valider après corrections / tests iPhone."
   }
 }
