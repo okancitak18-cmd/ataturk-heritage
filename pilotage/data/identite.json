@@ -74,7 +74,7 @@
     "photos": 24
   },
   "privacy": "Pas de compte utilisateur ni de collecte de données personnelles dans V2 ; favoris locaux. Vérification nécessaire avant toute fonctionnalité analytique.",
-  "business_model": "Accès culturel fondamental gratuit ; aucune monétisation ni publicité intégrée au prototype ; soutien possible au développement de l'application et de la communauté sous forme de dons qui pourront être reversé à des associations humanitaires oeuvrant pour les valeurs défendues par Atatürk.",
+  "business_model": "Accès culturel fondamental gratuit ; aucune monétisation ni publicité intégrée au prototype ; soutien possible au développement de l'application et de la communauté sous forme de dons qui pourront être reversé à des associations humanitaires oeuvrant pour les valeurs défendues par Atatürk ; caractère facultatif des dons, transparence sur leur affectation et identification des associations bénéficiaires à déterminer ultérieurement.",
   "repository": "https://github.com/okancitak18-cmd/ataturk-heritage",
   "site": "https://okancitak18-cmd.github.io/ataturk-heritage/",
   "owner_role": "Porteur du projet / validation éditoriale et produit",
