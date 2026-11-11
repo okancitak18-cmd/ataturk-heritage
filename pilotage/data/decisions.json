@@ -128,5 +128,14 @@
       "31-8"
     ],
     "issue_url": "https://github.com/okancitak18-cmd/ataturk-heritage/issues/10"
+  },
+  {
+    "id": "DEC-015",
+    "date": "2026-11-11",
+    "title": "Revue 31-7 : navigation bidirectionnelle et ouverture du widget sur sa fiche exacte",
+    "status": "À approfondir — conception approuvée, implémentation native en attente",
+    "rationale": "Prévoir précédent/suivant dans l'ordre chronologique de l'application. Le toucher d'un widget ouvre directement sa fiche et synchronise l'état affiché au moment de l'ouverture. Une expérience widget principale souhaitée mais iOS permet plusieurs instances ; conserver alors un état de sélection commun plutôt que promettre une limitation impossible. App Intents, App Groups, liens profonds et tests iPhone nécessaires.",
+    "related_goal": "31-7",
+    "issue_url": "https://github.com/okancitak18-cmd/ataturk-heritage/issues/11"
   }
 ]

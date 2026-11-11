@@ -331,8 +331,30 @@
         {
           "id": "31-7",
           "title": "Véritable bouton « citation suivante » dans widget iOS (App Intents)",
-          "status": "non_commence",
-          "notes": "Nécessite portage natif / tests iOS ; Revue 31-6 : nécessité confirmée de naviguer au contenu suivant directement dans le widget via App Intents, et d'ouvrir la fiche complète de l'app ; lié au ticket #10."
+          "status": "a_valider",
+          "notes": "Revue 11/11/2026 : À approfondir. Boutons Précédent et Suivant possibles via App Intents, ordre chronologique de l'écran Aujourd'hui. Au toucher du widget, ouvrir la fiche actuellement affichée dans l'app et synchroniser l'état courant au moment de cette ouverture (sans imposer à l'app ouverte un changement immédiat à chaque pression). Souhait d'une seule expérience widget ; iOS permet plusieurs instances, donc pas de blocage technique garanti : utiliser une configuration principale et un état de sélection partagé. Deep link direct sur ID de fiche. Tests SwiftUI/WidgetKit natifs et contraintes des formats/verrouillage encore requis. Voir issue #11 et #10.",
+          "review": {
+            "date": "2026-11-11",
+            "decision": "À approfondir",
+            "requirements": [
+              "Boutons précédent et suivant avec disponibilité adaptée aux formats iOS",
+              "Respect du même ordre chronologique que l'écran Aujourd'hui",
+              "Ouverture de la fiche affichée par le widget via deep link ; synchronisation à l'ouverture de l'application",
+              "Une expérience widget principale privilégiée ; ne pas promettre une restriction d'installation à une seule instance",
+              "Même source de sélection pour l'app et les widgets, préférences visuelles indépendantes"
+            ],
+            "platform_limitations": [
+              "WidgetKit permet normalement plusieurs instances du même widget ; ne pas promettre une limite logicielle absolue à une instance",
+              "Les interactions App Intents sur écran verrouillé peuvent nécessiter déverrouillage",
+              "Nécessité d'un vrai projet Xcode et d'une compilation sur iPhone"
+            ],
+            "implementation_status": "Revue documentée, développement natif non commencé",
+            "related_issues": [
+              "https://github.com/okancitak18-cmd/ataturk-heritage/issues/10",
+              "https://github.com/okancitak18-cmd/ataturk-heritage/issues/11"
+            ],
+            "issue_url": "https://github.com/okancitak18-cmd/ataturk-heritage/issues/11"
+          }
         },
         {
           "id": "31-8",
@@ -603,8 +625,8 @@
   ],
   "review_resume": {
     "status": "en_cours",
-    "resume_at_goal": "31-7",
-    "resume_title": "Véritable bouton « citation suivante » dans widget iOS (App Intents)",
-    "notes": "Revue 31-6 terminée avec décision À corriger (ticket #10). Taille moyenne recommandée, petit carré à expérimenter sous forme minimale, texte jamais tronqué de façon trompeuse, renouvellement quotidien et manuel, contenu aligné à l'app, thème indépendant. Poursuivre à 31-7."
+    "resume_at_goal": "31-8",
+    "resume_title": "Choix du mode de widget et thème sur iOS",
+    "notes": "Revue 31-7 enregistrée le 11/11/2026 : À approfondir. Actions précédent/suivant, chronologie, deep link vers la fiche affichée, widget principal unique en UX mais non techniquement exclusif iOS. Issue #11. Passer à 31-8."
   }
 }
