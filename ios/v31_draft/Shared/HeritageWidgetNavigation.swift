@@ -8,7 +8,18 @@ enum HeritageSharedState {
     private static let selectedIDKey = "heritage.selected.entry"
     private static let selectedDayKey = "heritage.selected.day"
 
+    // Free Apple Account edition has no provisioned App Group and no widgets.
+    #if HERITAGE_FREE_PERSONAL
+    private static var store: UserDefaults? { .standard }
+    #else
     private static var store: UserDefaults? { UserDefaults(suiteName: appGroupID) }
+    #endif
+
+    private static func reloadWidgetsIfAvailable() {
+        #if !HERITAGE_FREE_PERSONAL
+        WidgetCenter.shared.reloadTimelines(ofKind: "AtaturkHeritageDaily")
+        #endif
+    }
     private static func dayStamp(_ date: Date) -> String {
         let f = DateFormatter()
         f.calendar = Calendar(identifier: .gregorian)
@@ -38,7 +49,7 @@ enum HeritageSharedState {
         let record = feed[next]
         store.set(record.id, forKey: selectedIDKey)
         store.set(dayStamp(date), forKey: selectedDayKey)
-        WidgetCenter.shared.reloadTimelines(ofKind: "AtaturkHeritageDaily")
+        reloadWidgetsIfAvailable()
         return record
     }
 
@@ -46,7 +57,7 @@ enum HeritageSharedState {
         guard ArchiveRepository.entry(id: id) != nil, let store else { return }
         store.set(id, forKey: selectedIDKey)
         store.set(dayStamp(.now), forKey: selectedDayKey)
-        WidgetCenter.shared.reloadTimelines(ofKind: "AtaturkHeritageDaily")
+        reloadWidgetsIfAvailable()
     }
 }
 
