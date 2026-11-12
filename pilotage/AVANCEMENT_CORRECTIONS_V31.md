@@ -1,5 +1,17 @@
 # ATATÜRK Heritage — état de la campagne de corrections V3.1
 
+## Reprise des développements — 11 novembre 2026 (nouvelle conversation)
+
+Les développements suivants sont **commités sur la branche non publiée** :
+
+- **CI iOS Simulator** : job macOS/XcodeGen ajouté à la PR #17, génération des deux JSON locaux puis tentative de compilation non signée de l'application et de l'extension WidgetKit. Le résultat effectif de GitHub Actions doit être lu sur le **dernier commit** ; tant qu'un build n'est pas `success`, la compilation reste **non confirmée**.
+- **Qualité de la livraison** : `.gitignore` pour exclure les projets Xcode générés, données de build et paquets JSON dérivés ; contrôle de concurrence pour éviter des runs macOS obsolètes.
+- **SwiftUI / WidgetKit** : message correct pour `entries_v2.json`, prudence sur les attributions et licences, widget snapshot rapide sans réseau, chargement des médias HTTPS uniquement et extrait de citation sans coupe au milieu du premier mot.
+- **Début de l'audit iconographique** : lecture des notices Commons `p1920` et `p1918` documentée séparément ; **aucune licence, authenticité ou redistribution approuvée**, 24 médias toujours en attente de validation de fond.
+- **Continuité** : `pilotage/PASSATION_CONTINUITE_V31.md` recense décisions, liens, risques et ordre de travail entre conversations.
+
+La vérification de build sur CI est distincte de l'installation sur iPhone ; un vrai test iOS et la signature Apple restent indispensables. Le site public `main` et son point de restauration V3.1.1 ne sont pas modifiés dans ce lot.
+
 **Date :** 11 novembre 2026  
 **Branche :** `feature/v31-separation-app-laboratoire`  
 **Publication :** **non autorisée**, ne pas fusionner avant accord explicite du propriétaire.
