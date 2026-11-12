@@ -2,6 +2,14 @@
 
 **Date de vérification initiale : 11 novembre 2026.** Document de préparation ; il ne constitue **pas** un fichier IPA signé ni un lien natif déjà actif.
 
+## Solution personnelle gratuite — IPA non signé + AltStore ou SideStore
+
+**Disponible en préversion technique.** Le workflow `.github/workflows/ios-personal-ipa.yml` compile automatiquement sur un Mac GitHub hébergé une version **SwiftUI sans widgets ni App Group**. Un premier run réussi avec IPA téléchargeable est disponible : https://github.com/okancitak18-cmd/ataturk-heritage/actions/runs/43131394800 .
+
+Le ZIP `AtaturkHeritage-Personal-iPhone-unsigned` contient `ATATURKHeritage-Personal-unsigned.ipa`, **non signé**. Depuis un PC Windows, installer AltStore Classic sur l'iPhone et ouvrir l'IPA depuis l'onglet **My Apps > +**. AltStore signe la version avec le compte Apple gratuit, puis l'installe pour **sept jours renouvelables** sous réserve de connexion avec AltServer. Un simple clic sur le fichier IPA dans Safari ne l'installe pas. Le compte Apple gratuit ne donne pas accès à TestFlight ou à la distribution Ad Hoc officielle. La version personnelle n'a pas de WidgetKit natif et la recette réelle iPhone reste à réaliser.
+
+Voir la procédure détaillée : [INSTALLATION_PERSONNELLE_GRATUITE.md](INSTALLATION_PERSONNELLE_GRATUITE.md).
+
 ## État du projet
 
 - Application web préversion V3.1 sur GitHub Pages : https://okancitak18-cmd.github.io/ataturk-heritage/
@@ -11,7 +19,7 @@
 - La version native requiert le traitement distinct des certificats/profils de **l'app ET de l'extension WidgetKit** et de la capacité App Group.
 - La pipeline de la PR #17 a été mise à jour pour vérifier aussi une **compilation non signée pour appareil réel avec macOS 26 / Xcode 26+** (à distinguer du run Xcode 16.4 déjà réussi). Cette nouvelle vérification doit encore produire un résultat vert. Apple exige Xcode 26 ou ultérieur pour les nouveaux chargements iOS sur App Store Connect en 2026 : https://developer.apple.com/help/app-store-connect/manage-builds/upload-builds/ .
 
-## Solution A — installation immédiate (web app / PWA)
+## Solution A — installation immédiate (web app / PWA, aucun ordinateur)
 
 1. Ouvrir le site public avec **Safari sur iPhone**.
 2. Menu Partager → « Sur l'écran d'accueil ».
@@ -61,11 +69,12 @@ Références :
 | Option | Mac personnel | Abonnement Apple payant | Vrais widgets iOS | Installation via iPhone | Statut |
 |---|---|---|---|---|---|
 | PWA Safari | Non | Non | Non | Sur l'écran d'accueil | Disponible maintenant |
+| IPA personnel + AltStore Classic | Non (PC Windows nécessaire) | Non | Non dans l'édition simplifiée | Depuis AltStore après téléchargement de l'IPA | IPA non signé généré, test iPhone à faire |
 | TestFlight + CI cloud | Non | Oui | Oui | Lien TestFlight après signature / approbation | À configurer |
 | IPA signé Ad Hoc + lien HTTPS | Non, si CI cloud | Oui | Oui | Lien OTA, UDID préenregistré | À configurer |
 
 ### Bloqueur restant
 
-**Le propriétaire doit confirmer s'il dispose d'un abonnement Apple Developer Program actif.** Sans accès à cette équipe de développeur ni les droits nécessaires, nous pouvons compiler à distance pour simulateur, mais ne pouvons pas fabriquer un IPA signé installable sur son iPhone. Les certificats, clefs privées, identifiants App Group et profils ne doivent jamais être demandés par une conversation en clair ; ils doivent être déposés directement dans le système de secrets du fournisseur de CI.
+**Pour l'installation personnelle gratuite avec AltStore, aucun abonnement Apple Developer payant n'est nécessaire.** Pour les autres modes (TestFlight et Ad Hoc officiel), le propriétaire doit disposer d'un Apple Developer Program actif. Sans accès à cette équipe de développeur ni les droits nécessaires, nous pouvons compiler à distance pour simulateur, mais ne pouvons pas fabriquer un IPA signé installable sur son iPhone. Les certificats, clefs privées, identifiants App Group et profils ne doivent jamais être demandés par une conversation en clair ; ils doivent être déposés directement dans le système de secrets du fournisseur de CI.
 
 L'objectif est une installation native **hors publication publique App Store**. Une fois la voie TestFlight ou Ad Hoc choisie, elle doit être automatisée et testée sans prétendre que la signature est déjà acquise.
