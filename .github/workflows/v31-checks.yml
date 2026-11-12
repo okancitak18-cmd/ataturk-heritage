@@ -46,6 +46,9 @@ jobs:
           node scripts/package-ios-v31.mjs --out ios/v31_draft/Resources
           test -s ios/v31_draft/Resources/entries_v2.json
           test -s ios/v31_draft/Resources/photos_v2.json
+      - name: Generate native icon
+        working-directory: ios/v31_draft
+        run: swift generate-icon.swift
       - name: Generate Xcode project
         working-directory: ios/v31_draft
         run: |
