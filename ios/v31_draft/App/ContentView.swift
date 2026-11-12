@@ -152,6 +152,8 @@ private struct HeritageSettingsView: View {
     @Binding var language: String
     @Environment(\.heritageDesign) private var design
     @Environment(\.dismiss) private var dismiss
+    @State private var caching = false
+    @State private var cacheProgress = ""
 
     var body: some View {
         NavigationStack {
@@ -178,8 +180,35 @@ private struct HeritageSettingsView: View {
                         Text("Türkçe").tag("tr")
                     }
                 }
+                Section("Photographies hors connexion") {
+                    Button {
+                        guard !caching else { return }
+                        caching = true
+                        cacheProgress = "Téléchargement en cours…"
+                        Task {
+                            var success = 0
+                            for photo in ArchiveRepository.photos {
+                                if await HeritagePhotoCache.shared.image(for: photo) != nil {
+                                    success += 1
+                                }
+                            }
+                            cacheProgress = "\(success) / \(ArchiveRepository.photos.count) images disponibles localement"
+                            caching = false
+                        }
+                    } label: {
+                        Label("Précharger les photographies", systemImage: "arrow.down.circle")
+                    }
+                    .disabled(caching)
+                    if caching { ProgressView().tint(design.accent) }
+                    if !cacheProgress.isEmpty {
+                        Text(cacheProgress).font(.footnote).foregroundStyle(design.muted)
+                    }
+                    Text("Les images sont enregistrées uniquement sur cet iPhone, si leurs adresses sont accessibles. Le cache peut être effacé par iOS. Les droits et attributions restent à vérifier.")
+                        .font(.footnote)
+                        .foregroundStyle(design.muted)
+                }
                 Section {
-                    Text("Les images et attributions historiques sont encore en cours de vérification. Les fichiers textuels sont disponibles sans connexion.")
+                    Text("Les sources historiques sont en cours de vérification. Les 235 fiches textuelles sont embarquées dans l'application.")
                         .font(.footnote)
                 }
             }
@@ -230,7 +259,7 @@ private struct TodayPages: View {
                 .transition(.opacity.combined(with: .move(edge: .trailing)))
                 .simultaneousGesture(
                     DragGesture(minimumDistance: 70).onEnded { value in
-                        if value.translation.height < -85 &&
+                        if abs(value.translation.height) > 100 &&
                            abs(value.translation.height) > abs(value.translation.width) * 1.3 {
                             openContext(current)
                         } else if abs(value.translation.width) > 85 &&
@@ -243,7 +272,7 @@ private struct TodayPages: View {
                 )
             HStack(spacing: 8) {
                 Image(systemName: "hand.draw")
-                Text("Balayer latéralement · Vers le haut pour comprendre")
+                Text("Balayer latéralement · Glisser verticalement pour comprendre")
             }
             .font(.system(size: 11))
             .foregroundStyle(design.muted)
