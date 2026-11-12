@@ -1,0 +1,68 @@
+name: iPhone Personal IPA (unsigned for AltStore)
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - "ios/v31_draft/**"
+      - "data/entries_v2.json"
+      - "data/photos_v2.json"
+      - "scripts/package-ios-v31.mjs"
+      - ".github/workflows/ios-personal-ipa.yml"
+concurrency:
+  group: personal-ipa-${{ github.ref }}
+  cancel-in-progress: true
+permissions:
+  contents: read
+jobs:
+  personal-ipa:
+    name: Generate unsigned personal iPhone IPA
+    runs-on: macos-26
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Xcode version
+        run: xcodebuild -version
+      - name: Install XcodeGen
+        run: brew install xcodegen
+      - name: Generate versioned local resources
+        run: node scripts/package-ios-v31.mjs --out ios/v31_draft/Resources
+      - name: Generate personal app-only project
+        working-directory: ios/v31_draft
+        run: |
+          xcodegen generate --spec project-personal.yml
+          test -d ATATURKHeritagePersonal.xcodeproj
+      - name: Compile real-device binary WITHOUT Apple signing
+        run: |
+          set -euo pipefail
+          xcodebuild \
+            -project ios/v31_draft/ATATURKHeritagePersonal.xcodeproj \
+            -scheme ATATURKHeritage \
+            -configuration Release \
+            -destination 'generic/platform=iOS' \
+            -derivedDataPath "$RUNNER_TEMP/ataturk-personal" \
+            CODE_SIGNING_ALLOWED=NO \
+            build
+      - name: Package an unsigned IPA (AltStore signs it locally)
+        run: |
+          set -euo pipefail
+          APP="$RUNNER_TEMP/ataturk-personal/Build/Products/Release-iphoneos/ATATURKHeritage.app"
+          test -d "$APP"
+          test -s "$APP/ATATURKHeritage"
+          mkdir -p "$RUNNER_TEMP/personal-ipa/Payload"
+          ditto "$APP" "$RUNNER_TEMP/personal-ipa/Payload/ATATURKHeritage.app"
+          (
+            cd "$RUNNER_TEMP/personal-ipa"
+            zip -qry "$GITHUB_WORKSPACE/ATATURKHeritage-Personal-unsigned.ipa" Payload
+          )
+          test -s ATATURKHeritage-Personal-unsigned.ipa
+          unzip -t ATATURKHeritage-Personal-unsigned.ipa | tail -1
+          shasum -a 256 ATATURKHeritage-Personal-unsigned.ipa > ATATURKHeritage-Personal-unsigned.ipa.sha256
+          echo "IMPORTANT: UNSIGNED IPA. Requires AltStore Classic, SideStore or signing to install."
+      - uses: actions/upload-artifact@v4
+        with:
+          name: AtaturkHeritage-Personal-iPhone-unsigned
+          path: |
+            ATATURKHeritage-Personal-unsigned.ipa
+            ATATURKHeritage-Personal-unsigned.ipa.sha256
+          if-no-files-found: error
+          retention-days: 14
