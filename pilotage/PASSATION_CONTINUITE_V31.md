@@ -3,7 +3,20 @@
 **Mise à jour initiale : 11 novembre 2026**  
 **Dépôt :** `okancitak18-cmd/ataturk-heritage`  
 **Développement :** `feature/v31-separation-app-laboratoire`, PR #17 en brouillon  
-**Site public :** GitHub Pages déployé depuis `main` ; interdiction de fusion/publication sans validation explicite du propriétaire.
+**Site public :** préversion intermédiaire V3.1 sur `main` après autorisation explicite, publication finale toujours soumise à validation.
+
+## Publication intermédiaire — décision et résultat (11 novembre 2026)
+
+- **Décision propriétaire : publication intermédiaire autorisée**, avec réédition possible après validation finale V3.1.
+- **PR #18 fusionnée** : https://github.com/okancitak18-cmd/ataturk-heritage/pull/18
+- **GitHub Pages déployé avec succès** : https://github.com/okancitak18-cmd/ataturk-heritage/actions/runs/43129420609
+- **Nouveau main** : `246ee65481b17064e912d9a43267dd1ce6816108` ; précédemment `d4375729165e8ed9e70b45fb74ab65e86f214626`.
+- **Deux sauvegardes web** dans `main` : `versions/v3.1.1/` et `versions/v3.1-intermediaire/` ; application et laboratoire à chaque fois.
+- Seules les interfaces HTML, le manifeste PWA et la documentation de publication sont diffusés ; **la PR #17 demeure en brouillon** pour le développement natif et les audits.
+- L'application web est installable sur l'écran d'accueil Safari comme **web app**, pas une app SwiftUI dotée de WidgetKit.
+- **Compilation Xcode CI réussie** : run https://github.com/okancitak18-cmd/ataturk-heritage/actions/runs/43127593039, app et extension WidgetKit pour simulateur **non signé** (Xcode 16.4).
+- **Pas d'IPA natif installable** pour le moment. Les choix possibles sans Mac : TestFlight via build cloud (lien d'invitation, sans publication publique App Store) ou IPA Ad Hoc signé et lien OTA lié à l'UDID. Voir `ios/v31_draft/DISTRIBUTION_SANS_MAC.md`.
+- **Bloqueur utilisateur** : confirmer l'existence d'un abonnement Apple Developer Program actif ; ne jamais envoyer les secrets Apple dans la conversation.
 
 ## Démarrage d'une nouvelle conversation
 
@@ -12,7 +25,7 @@
 3. Vérifier le dernier commit de `main` et la dernière sauvegarde (`versions/v3.1.1/`) avant toute opération risquée.
 4. Continuer uniquement dans la branche de développement ou une PR non publiée, en conservant les fichiers `data/entries_v2.json` et `data/photos_v2.json` comme base éditoriale.
 5. Consigner dans la PR, les tickets et ce registre ce qui est **codé**, **testé** ou **validé** — trois états différents.
-6. Ne jamais fusionner dans `main` sans une décision utilisateur explicite, même si tous les contrôles CI réussissent.
+6. Ne pas fusionner des développements futurs dans `main` sans une décision utilisateur explicite ; la publication intermédiaire du 11 novembre 2026 constitue une autorisation spécifique, pas une validation définitive de la V3.1.
 
 ## Décisions de gouvernance confirmées
 
