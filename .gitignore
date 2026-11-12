@@ -1,0 +1,12 @@
+# Generated files — never commit local iOS build output
+.DS_Store
+.build/
+ios/v31_draft/Resources/
+ios/v31_draft/ATATURKHeritage.xcodeproj/
+ios/v31_draft/App/Info.plist
+ios/v31_draft/Widgets/Info.plist
+ios/v31_draft/App/ATATURKHeritage.entitlements
+ios/v31_draft/Widgets/ATATURKHeritageWidgets.entitlements
+DerivedData/
+*.xcuserstate
+xcuserdata/
