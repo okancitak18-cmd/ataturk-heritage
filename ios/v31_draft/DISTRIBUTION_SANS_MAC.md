@@ -9,6 +9,7 @@
 - Compilation automatique iOS Simulator non signée sur runner GitHub Actions `macos-15` : **réussie**, run https://github.com/okancitak18-cmd/ataturk-heritage/actions/runs/43127593039 (Xcode 16.4, app et widgets).
 - Aucun `.ipa` destiné à iPhone réel, signé et provisionné, n'a encore été produit.
 - La version native requiert le traitement distinct des certificats/profils de **l'app ET de l'extension WidgetKit** et de la capacité App Group.
+- La pipeline de la PR #17 a été mise à jour pour vérifier aussi une **compilation non signée pour appareil réel avec macOS 26 / Xcode 26+** (à distinguer du run Xcode 16.4 déjà réussi). Cette nouvelle vérification doit encore produire un résultat vert. Apple exige Xcode 26 ou ultérieur pour les nouveaux chargements iOS sur App Store Connect en 2026 : https://developer.apple.com/help/app-store-connect/manage-builds/upload-builds/ .
 
 ## Solution A — installation immédiate (web app / PWA)
 
