@@ -31,7 +31,16 @@
       "rightsReview": "non_verifiee",
       "imageUrlAvailability": "non_testee",
       "reuseDecision": "suspendue",
-      "auditNote": "Métadonnées préexistantes non vérifiées contre les notices originales ; aucun droit de réutilisation ni datation exacte présumé."
+      "auditNote": "Notice Wikimedia Commons consultée le 11-11-2026 (date et auteur déclarés, statut PD Turquie affiché). Contrôle documentaire partiel ; provenance primaire, droits territoriaux et image non authentifiés. Aucune approbation de redistribution.",
+      "sourceNoticeReview": {
+        "checkedAt": "2026-11-11",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Atat%C3%BCrk.jpg",
+        "level": "lecture_notice_publique_uniquement",
+        "descriptionNoted": "Portrait attribué au début des années 1920 ; auteur inconnu ; origine déclarée kultur.gov.tr",
+        "imageShownByCommons": "538 × 709 pixels ; 59 KB dans la notice consultée",
+        "rightsSummary": "Commons affiche une déclaration de domaine public relative à la Turquie ; aucune conclusion indépendante sur la réutilisation internationale",
+        "outstanding": "Authenticité, provenance primaire, disponibilité URL du média et portée juridique de la licence non vérifiées"
+      }
     },
     {
       "photoId": "p1918",
@@ -49,7 +58,16 @@
       "rightsReview": "non_verifiee",
       "imageUrlAvailability": "non_testee",
       "reuseDecision": "suspendue",
-      "auditNote": "Métadonnées préexistantes non vérifiées contre les notices originales ; aucun droit de réutilisation ni datation exacte présumé."
+      "auditNote": "Notice Wikimedia Commons consultée le 11-11-2026 : référence AWM P04621.002, portrait circa 1918, mention de retouche du tampon, déclaration PD Australie et avertissement droits États-Unis. Aucune validation juridique ou d'authenticité.",
+      "sourceNoticeReview": {
+        "checkedAt": "2026-11-11",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kemal_Atat%C3%BCrk_portrait.jpg",
+        "level": "lecture_notice_publique_uniquement",
+        "descriptionNoted": "Portrait en uniforme daté circa 1918 ; référence Australian War Memorial P04621.002, auteur inconnu, stamp AWM supprimé selon la notice",
+        "imageShownByCommons": "433 × 640 pixels ; 173 KB dans la notice consultée ; historique de modifications du fichier",
+        "rightsSummary": "Commons indique le domaine public australien et signale la nécessité d'une justification du domaine public américain",
+        "outstanding": "Vérifier notice primaire AWM, image non retouchée, chaîne de provenance et droits selon pays de distribution"
+      }
     },
     {
       "photoId": "p1935",
