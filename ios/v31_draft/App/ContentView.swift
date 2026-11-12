@@ -79,9 +79,9 @@ struct HeritageRootView: View {
                     if !feed.isEmpty {
                         TodayPages(feed: feed, language: language, favorites: favoriteIDs, toggle: toggleFavorite)
                     } else {
-                        ContentUnavailableView("Registre introuvable", systemImage: "books.vertical", description: Text("Vérifiez que entries.json est inclus dans les ressources de l’application."))
+                        ContentUnavailableView("Registre introuvable", systemImage: "books.vertical", description: Text("Vérifiez que entries_v2.json est inclus dans les ressources de l’application."))
                     }
-                    Text(language == "fr" ? "Les dates et les citations sont vérifiables depuis leur source. Si un jour n’est pas établi, il n’est jamais inventé." : "Kesin tarihi bilinmeyen sözler için gün uydurulmaz.")
+                    Text(language == "fr" ? "Les fiches indiquent leurs sources déclarées ; dates et attributions font encore l’objet d’une vérification éditoriale. Aucun jour incertain n’est inventé." : "Kesin tarihi bilinmeyen sözler için gün uydurulmaz.")
                         .font(.system(size: 12, design: .serif)).foregroundStyle(HeritagePalette.muted)
                         .padding(.horizontal, 4)
                 }
@@ -269,7 +269,7 @@ private struct ArchiveGalleryView: View {
                     Text("PHOTOTHÈQUE HISTORIQUE")
                         .font(.system(size: 10, weight: .semibold)).tracking(2)
                         .foregroundStyle(HeritagePalette.bordeaux)
-                    Text("Photographies d’époque, scans et documents historiques conservés dans des archives identifiées. Aucune image générée par IA.")
+                    Text("Photographies et documents associés à des notices de provenance déclarée. Leur authenticité, leur datation et leurs droits de réutilisation restent à vérifier ; aucune image générée par IA.")
                         .font(.system(size: 14, design: .serif))
                         .foregroundStyle(HeritagePalette.muted)
                     LazyVGrid(columns: columns, spacing: 14) {
@@ -326,7 +326,7 @@ private struct ArchiveGalleryDetailView: View {
                     .font(.system(size: 10, weight: .semibold))
                     .tracking(1.5)
                     .foregroundStyle(HeritagePalette.bordeaux)
-                Text(photo.license)
+                Text("Licence déclarée, non vérifiée : \(photo.license)")
                     .font(.system(size: 13, design: .serif))
                 if let url = URL(string: photo.sourceUrl) {
                     Link("Voir la notice et les droits d’utilisation", destination: url)
