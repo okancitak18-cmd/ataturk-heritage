@@ -13,6 +13,14 @@ for(const p of ledger.photos){
  assert.ok(IDs.has(p.photoId),p.photoId);
  assert.equal(p.linkedEntryCount,entries.filter(e=>e.photoId===p.photoId).length,p.photoId);
  assert.ok(['a_verifier','valide','refuse'].includes(p.status),p.photoId);
+ if(p.sourceNoticeReview){
+   assert.equal(p.sourceNoticeReview.sourceUrl,p.declaredSourceUrl,p.photoId+' source notice');
+   assert.match(p.sourceNoticeReview.checkedAt,/^\d{4}-\d{2}-\d{2}$/,p.photoId+' audit date');
+   assert.equal(p.sourceNoticeReview.level,'lecture_notice_publique_uniquement',p.photoId);
+   // Reading a Commons notice must NEVER auto-approve distribution or authenticity.
+   assert.notEqual(p.status,'valide',p.photoId+' source review alone is not approval');
+   assert.equal(p.reuseDecision,'suspendue',p.photoId+' redistribution not cleared');
+ }
  if(p.status==='valide'){
    assert.equal(p.rightsReview,'verifiee',p.photoId+' droits non contrôlés');
    assert.equal(p.visualAuthenticity,'verifiee',p.photoId+' authenticité non contrôlée');
