@@ -15,9 +15,11 @@ struct HeritageProvider: TimelineProvider {
     }
 
     func getSnapshot(in context: Context, completion: @escaping (HeritageTimelineItem) -> Void) {
-        Task {
-            completion(await loadItem(for: .now))
-        }
+        // A snapshot must remain responsive, including in the widget gallery.
+        // The regular timeline fetches an image when the network is available.
+        completion(HeritageTimelineItem(date: .now,
+                                        archive: HeritageSharedState.currentEntry(),
+                                        imageData: nil))
     }
 
     func getTimeline(in context: Context, completion: @escaping (Timeline<HeritageTimelineItem>) -> Void) {
@@ -38,7 +40,8 @@ struct HeritageProvider: TimelineProvider {
         var imageData: Data? = nil
         if let archive,
            let photo = ArchiveRepository.photo(for: archive),
-           let url = URL(string: photo.url) {
+           let url = URL(string: photo.url),
+           url.scheme == "https" {
             var request = URLRequest(url: url)
             request.timeoutInterval = 9
             // Photographs come only from verified archival metadata URLs.
@@ -73,7 +76,10 @@ struct HeritageWidgetExcerpt {
             if preview.count + (preview.isEmpty ? 0 : 1) + piece.count > max(1, limit - 1) { break }
             preview += (preview.isEmpty ? "" : " ") + piece
         }
-        if preview.isEmpty { preview = String(normalized.prefix(max(1, limit - 1))) }
+        // Never cut a long first word mid-character/word: it can distort a quote.
+        if preview.isEmpty {
+            return HeritageWidgetExcerpt(text: "Lire la fiche complète", shortened: true)
+        }
         return HeritageWidgetExcerpt(text: preview + "…", shortened: true)
     }
 }
@@ -117,7 +123,7 @@ struct HeritageWidgetView: View {
     }
     private var date: String {
         guard let record = item.archive else { return "ARCHIVES" }
-        return ArchiveRepository.sameCalendarDay(record, as: item.date) ? "CE JOUR DANS L’HISTOIRE" : "UNE PENSÉE À DÉCOUVRIR"
+        return ArchiveRepository.sameCalendarDay(record, as: item.date) ? "CE JOUR DANS L’HISTOIRE" : (record.isQuote ? "UNE PENSÉE À DÉCOUVRIR" : "UN REPÈRE À DÉCOUVRIR")
     }
 
     @ViewBuilder
