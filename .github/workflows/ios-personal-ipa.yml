@@ -26,6 +26,9 @@ jobs:
         run: brew install xcodegen
       - name: Generate versioned local resources
         run: node scripts/package-ios-v31.mjs --out ios/v31_draft/Resources
+      - name: Generate native icon
+        working-directory: ios/v31_draft
+        run: swift generate-icon.swift
       - name: Generate personal app-only project
         working-directory: ios/v31_draft
         run: |
