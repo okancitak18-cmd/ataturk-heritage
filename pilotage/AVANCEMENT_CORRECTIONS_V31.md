@@ -20,6 +20,21 @@
 | P2 | WidgetKit SwiftUI : préparation d'un composant de texte court | Source snapshot modifiée ; **pas de compilation iOS** |
 | P2 | Contrôle automatisé de données et syntaxe | `scripts/check-v31.mjs` + workflow PR ; premiers runs GitHub Actions **réussis** |
 
+## Étape suivante accomplie — fiabilisation des sources et socle iOS (11 novembre 2026)
+
+- **24 photographies inventoriées** dans `data/photo_audit_v31.json` avec nombre de fiches liées, institution, licence déclarée et statut de vérification. **Zéro photographie approuvée pour redistribution** : droits, authenticité, date et disponibilité des liens restent à contrôler individuellement.
+- **Données iOS embarquées** : `ios/v31_draft/Shared/ArchiveRepository.swift` charge les JSON locaux sans récupération distante automatique, conformément à la décision 31-10.
+- **Générateur de ressources** : `scripts/package-ios-v31.mjs` copie les JSON sources dans un paquet local avec empreintes SHA-256 et budget textuel de 512 Kio ; les archives photographiques originales n'y figurent pas.
+- **Point d'entrée de l'application et composants SwiftUI** : `ios/v31_draft/App/`.
+- **Navigation native en brouillon** : deux App Intents précédent/suivant, état partagé App Group et deep link `ataturkheritage://entry/<id>`, codés dans `ios/v31_draft`.
+- **Projet XcodeGen proposé** : `ios/v31_draft/project.yml`, à générer, configurer, signer et compiler sur Mac ; identifiants Apple et App Group proposés, **non provisionnés**.
+- **Sauvegarde exacte** de la V3.1.1 actuellement publiée (application et laboratoire) sous `versions/v3.1.1/`, associée au commit stable `d4375729165e8ed9e70b45fb74ab65e86f214626`.
+- **CI améliorée** : inventaire des photos, fabrication du paquet JSON et contrôles structurels du code natif, en plus des tests existants. Les contrôles structurels ne démontrent ni compilation iOS ni authenticité historique.
+
+### Critères encore en suspens
+
+Le vrai projet Xcode généré, la compilation et signature Apple, le comportement WidgetKit sur iPhone, l'intégration des photographies hors ligne et l'audit juridique des archives restent **non réalisés**. Les textes/données peuvent être embarqués sans connexion après intégration dans les cibles, mais la photothèque peut afficher un placeholder hors ligne.
+
 ## Décisions reportées / non tranchées
 
 - **Rouge Republic historiquement authentifié** : choisir après vérification de sources originales et examen de variantes. Aucun hex « officiel 1923 » inventé.
