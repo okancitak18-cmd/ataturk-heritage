@@ -38,7 +38,7 @@ struct ArchivePhotoView: View {
     private var placeholder: some View {
         ZStack {
             HeritagePalette.bordeaux.opacity(0.13)
-            Image(systemName: "camera.metering.unknown")
+            Image(systemName: "camera")
                 .font(.system(size: 26, weight: .ultraLight))
                 .foregroundStyle(HeritagePalette.muted)
         }
