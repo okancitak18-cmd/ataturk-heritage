@@ -18,6 +18,17 @@
 - **Pas d'IPA natif installable** pour le moment. Les choix possibles sans Mac : TestFlight via build cloud (lien d'invitation, sans publication publique App Store) ou IPA Ad Hoc signé et lien OTA lié à l'UDID. Voir `ios/v31_draft/DISTRIBUTION_SANS_MAC.md`.
 - **Bloqueur utilisateur** : confirmer l'existence d'un abonnement Apple Developer Program actif ; ne jamais envoyer les secrets Apple dans la conversation.
 
+## Nouveau circuit gratuit d'installation personnelle (11 novembre 2026)
+
+- Le propriétaire n'a **pas d'abonnement Apple Developer Program** et souhaite installer une application SwiftUI **sans Mac ni App Store public**.
+- Option gratuite mise en place : édition iPhone personnelle **sans widgets** (`ios/v31_draft/project-personal.yml`), état local dans `UserDefaults.standard` au lieu d'un App Group.
+- Nouveau workflow `.github/workflows/ios-personal-ipa.yml` : compilation Release `generic/platform=iOS`, IPA **non signée** et SHA-256 publiés comme artifact GitHub Actions (rétention 14 jours). **Premier run vert** : https://github.com/okancitak18-cmd/ataturk-heritage/actions/runs/43131394800 .
+- Documentation utilisateur : `ios/v31_draft/INSTALLATION_PERSONNELLE_GRATUITE.md` et `DISTRIBUTION_SANS_MAC.md`.
+- Étape nécessaire : installation/signature de l'IPA avec **AltStore Classic sur un PC Windows**, ou **SideStore avec accès initial à un ordinateur**. Gratuit, personnel, à renouveler tous les 7 jours. L'IPA seule n'est pas installable par Safari.
+- La fonctionnalité **WidgetKit native** reste dans le projet complet non publié ; elle n'est pas comprise dans cette édition de sideload personnel.
+- Le premier IPA a été généré et empaqueté sur CI, mais **l'installation sur l'iPhone du propriétaire et la recette tactile restent non testées**.
+- Le site Pages préversion V3.1 déjà publié n'est pas modifié par ces changements ; poursuivre la PR #17, ne pas fusionner de futurs changements sans autorisation spécifique.
+
 ## Démarrage d'une nouvelle conversation
 
 1. Lire ce document et `pilotage/AVANCEMENT_CORRECTIONS_V31.md`, `pilotage/BILAN_REVUE_V3.1.md`, puis les issues #1 à #16.
