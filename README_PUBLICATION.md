@@ -2,8 +2,8 @@
 
 ## Pages du site
 
-- `index.html` : expérience immersive en plein écran sur Safari iPhone ; sur ordinateur, le laboratoire complet reste visible.
-- `laboratoire.html` : laboratoire original à trois colonnes, avec sélecteur de date, thèmes, aperçu des widgets et inspecteur historique.
+- `index.html` : expérience de consultation immersive sur Safari iPhone **et ordinateur**, sans commandes de simulation visibles.
+- `laboratoire.html` : environnement séparé de simulation, avec sélecteur de date, thèmes, aperçu des widgets et inspecteur historique.
 - `manifest.webmanifest` et `icon-*.png` : icônes et possibilité facultative d’ajout à l’écran d’accueil (aucune installation requise pour consulter le site).
 
 **Configuration initiale** : application, thème Heritage, 29 octobre 2026. Les `?mode=app&theme=heritage&date=2026-10-29` sont pris en charge.
@@ -39,3 +39,16 @@ Envoyer ce ZIP ou ce dossier à https://app.netlify.com/drop ; le service attrib
 - Les pages portent l'indication robots « noindex » pour réduire leur référencement automatique.
 
 Site public : https://okancitak18-cmd.github.io/ataturk-heritage/
+
+## Installation immédiate sur iPhone (application web, sans App Store)
+
+1. Dans **Safari iPhone**, ouvrir https://okancitak18-cmd.github.io/ataturk-heritage/ .
+2. Dans le menu de la page, sélectionner **Partager > Sur l'écran d'accueil**.
+3. Activer **Ouvrir comme app web**, puis **Ajouter**.
+4. Ouvrir l'icône *Heritage* sur l'écran d'accueil.
+
+Il s'agit d'une **web app** (PWA) et non d'une app iOS SwiftUI signée. Les widgets système WidgetKit et les App Intents natifs ne sont **pas** disponibles dans la PWA. Les contenus textuels sont incorporés dans le HTML, mais **le chargement hors connexion n'est pas garanti sans mise en cache préalable** ; les photos restent soumises à l'accès réseau et aux licences. Cette installation n'ajoute ni application via App Store ni binaire IPA.
+
+## Livraison iOS native sans Mac personnel
+
+Le build iOS Simulator non signé de la branche de développement a passé GitHub Actions sur macOS hébergé (run 43127593039). Pour installer un vrai IPA via lien, il faudra un compte Apple Developer actif, les deux identifiants et App Group, les certificats et profils de provisioning correspondant à l'app **et** aux widgets, et l'UDID de l'iPhone pour une distribution Ad Hoc. Préférer TestFlight si plusieurs testeurs ont besoin de liens sans renseigner les UDID. Aucun IPA signé ou lien d'installation native n'est encore disponible.
