@@ -54,6 +54,55 @@ struct HeritageProvider: TimelineProvider {
     }
 }
 
+
+/** A shortened quote must be labelled as an excerpt rather than a complete quotation.
+    Boundaries are composed of Characters, which do not split grapheme clusters. */
+struct HeritageWidgetExcerpt {
+    let text: String
+    let shortened: Bool
+
+    static func make(_ value: String, limit: Int) -> HeritageWidgetExcerpt {
+        let normalized = value.split(whereSeparator: { $0.isWhitespace }).joined(separator: " ")
+        guard normalized.count > limit else {
+            return HeritageWidgetExcerpt(text: normalized, shortened: false)
+        }
+        let words = normalized.split(separator: " ")
+        var preview = ""
+        for word in words {
+            let piece = String(word)
+            if preview.count + (preview.isEmpty ? 0 : 1) + piece.count > max(1, limit - 1) { break }
+            preview += (preview.isEmpty ? "" : " ") + piece
+        }
+        if preview.isEmpty { preview = String(normalized.prefix(max(1, limit - 1))) }
+        return HeritageWidgetExcerpt(text: preview + "…", shortened: true)
+    }
+}
+
+private struct HeritageWidgetText: View {
+    let fullText: String
+    let limit: Int
+    let color: Color
+    let fontSize: CGFloat
+
+    private var excerpt: HeritageWidgetExcerpt { .make(fullText, limit: limit) }
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 4) {
+            Text(excerpt.text)
+                .font(.system(size: fontSize, design: .serif))
+                .foregroundStyle(color)
+                .fixedSize(horizontal: false, vertical: true)
+                .accessibilityLabel(fullText)
+            if excerpt.shortened {
+                Text("EXTRAIT · OUVRIR LA FICHE")
+                    .font(.system(size: 8, weight: .semibold))
+                    .foregroundStyle(color.opacity(0.75))
+                    .accessibilityLabel("Extrait, consulter la fiche pour lire l’intégralité")
+            }
+        }
+    }
+}
+
 struct HeritageWidgetView: View {
     @Environment(\.widgetFamily) private var family
     var item: HeritageTimelineItem
@@ -91,13 +140,14 @@ struct HeritageWidgetView: View {
         Group {
             switch family {
             case .accessoryInline:
-                Text("ATATÜRK · " + phrase)
+                Text("ATATÜRK · " + HeritageWidgetExcerpt.make(phrase, limit: 26).text)
                     .lineLimit(1)
+                    .accessibilityLabel(phrase)
             case .accessoryRectangular:
                 VStack(alignment: .leading, spacing: 3) {
                     Text("ATATÜRK · HERITAGE")
                         .font(.system(size: 10, weight: .bold)).tracking(1)
-                    Text(phrase).font(.system(size: 14, design: .serif)).lineLimit(3)
+                    HeritageWidgetText(fullText: phrase, limit: 55, color: .primary, fontSize: 12)
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
             case .systemSmall:
@@ -110,10 +160,7 @@ struct HeritageWidgetView: View {
                         Text("ATATÜRK")
                             .font(.system(size: 11, weight: .semibold, design: .serif)).tracking(2)
                         Spacer()
-                        Text(phrase)
-                            .font(.system(size: 15, weight: .regular, design: .serif))
-                            .lineLimit(4)
-                            .minimumScaleFactor(0.7)
+                        HeritageWidgetText(fullText: phrase, limit: 62, color: .white, fontSize: 14)
                         Rectangle().fill(.white.opacity(0.75)).frame(width: 30, height: 1)
                     }
                     .foregroundStyle(.white)
@@ -128,11 +175,7 @@ struct HeritageWidgetView: View {
                         Text("ATATÜRK  /  HERITAGE")
                             .font(.system(size: 9, weight: .semibold)).tracking(1.2)
                             .foregroundStyle(HeritageWidgetTheme.accent)
-                        Text(phrase)
-                            .font(.system(size: 19, design: .serif))
-                            .lineLimit(4)
-                            .minimumScaleFactor(0.72)
-                            .foregroundStyle(HeritageWidgetTheme.ink)
+                        HeritageWidgetText(fullText: phrase, limit: 100, color: HeritageWidgetTheme.ink, fontSize: 17)
                         Spacer(minLength: 1)
                         Text(date)
                             .font(.system(size: 8)).tracking(0.8)
@@ -149,10 +192,8 @@ struct HeritageWidgetView: View {
                         Text("ATATÜRK   /   HERITAGE")
                             .font(.system(size: 10, weight: .semibold)).tracking(2)
                             .foregroundStyle(HeritageWidgetTheme.accent)
-                        Text(phrase)
-                            .font(.system(size: 24, design: .serif))
-                            .lineLimit(4).minimumScaleFactor(0.7)
-                        Text(caption)
+                        HeritageWidgetText(fullText: phrase, limit: 210, color: HeritageWidgetTheme.ink, fontSize: 22)
+                        Text(HeritageWidgetExcerpt.make(caption, limit: 160).text)
                             .font(.system(size: 12))
                             .foregroundStyle(HeritageWidgetTheme.muted)
                             .lineLimit(4)
