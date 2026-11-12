@@ -23,3 +23,41 @@ jobs:
           node scripts/check-photo-audit-v31.mjs
           node scripts/check-ios-draft-v31.mjs
           node scripts/package-ios-v31.mjs --out .build/ios-resources
+
+  ios-simulator-build:
+    name: Compile iOS app and widgets (unsigned simulator)
+    runs-on: macos-15
+    timeout-minutes: 30
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - name: Xcode environment
+        run: |
+          xcodebuild -version
+          xcodebuild -showsdks
+      - name: Install XcodeGen
+        run: brew install xcodegen
+      - name: Bundle versioned offline resources
+        run: |
+          node scripts/package-ios-v31.mjs --out ios/v31_draft/Resources
+          test -s ios/v31_draft/Resources/entries_v2.json
+          test -s ios/v31_draft/Resources/photos_v2.json
+      - name: Generate Xcode project
+        working-directory: ios/v31_draft
+        run: |
+          xcodegen generate --spec project.yml
+          test -d ATATURKHeritage.xcodeproj
+          grep -q 'entries_v2.json' ATATURKHeritage.xcodeproj/project.pbxproj
+          grep -q 'photos_v2.json' ATATURKHeritage.xcodeproj/project.pbxproj
+      - name: Compile application and WidgetKit extension
+        run: |
+          set -o pipefail
+          xcodebuild \
+            -project ios/v31_draft/ATATURKHeritage.xcodeproj \
+            -scheme ATATURKHeritage \
+            -configuration Debug \
+            -destination 'generic/platform=iOS Simulator' \
+            -derivedDataPath "$RUNNER_TEMP/ataturk-v31-build" \
+            CODE_SIGNING_ALLOWED=NO \
+            build
