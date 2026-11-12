@@ -4,7 +4,10 @@
 
 ## Accès rapides
 
-- [Application web V3.1](https://okancitak18-cmd.github.io/ataturk-heritage/) — démonstration mobile iPhone.
+> **Préversion intermédiaire V3.1 publiée pour essais, non validée définitivement.** L'application web et le laboratoire sont séparés ; les archives et les visuels conservent leur statut de vérification éditoriale en cours. Les widgets visibles sur le web sont des simulations : le build iOS natif et l'installation nécessitent une distribution Apple signée. Voir [PREVERSION_INTERMEDIAIRE_V31.md](PREVERSION_INTERMEDIAIRE_V31.md).
+
+
+- [Application web V3.1 — préversion intermédiaire](https://okancitak18-cmd.github.io/ataturk-heritage/) — démonstration mobile iPhone.
 - [Laboratoire interactif](https://okancitak18-cmd.github.io/ataturk-heritage/laboratoire.html) — thèmes, dates, interfaces simulées.
 - **[Centre de pilotage du projet](https://okancitak18-cmd.github.io/ataturk-heritage/pilotage/)** — fiche d'identité, feuille de route et gestion des décisions.
 - [Guide de pilotage](pilotage/README.md) — comment faire évoluer le registre de référence.

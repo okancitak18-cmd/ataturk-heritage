@@ -1,9 +1,9 @@
 {
-  "name": "ATATÜRK Heritage — Démonstration",
+  "name": "ATATÜRK Heritage — Préversion intermédiaire",
   "short_name": "Heritage",
-  "description": "Prototype historique et culturel — V3.1",
+  "description": "Musée personnel historique · Préversion intermédiaire V3.1",
   "lang": "fr",
-  "start_url": "./?mode=app&theme=heritage&date=2026-10-29",
+  "start_url": "./",
   "scope": "./",
   "display": "standalone",
   "background_color": "#f7f3eb",
